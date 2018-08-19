@@ -1,18 +1,4 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -23,35 +9,196 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
+<div id="topnav">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <ul class="list-inline">
+                    <li><a href="#"><i class="fa fa-phone"></i> +1 2223 4567</a> </li>
+                    <li><a href="#"><i class="fa fa-envelope"></i> email@example.com</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+                <ul class="list-inline right">
+                    <li><a href="#"><i class="fa fa-user"></i> sign in </a></li>
+                    <li><a href="#"><span><i class="fa fa-heart"></i></span> wish list</a></li>
+                    <li><a href="#"><i class="fa fa-shopping-cart"></i> cart <span class="badge">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
-	<header id="masthead" class="site-header" role="banner">
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset="500">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="logo img-responsive"></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">men
+                    <span class="caret"></span></a>
+                <div class="mega-drop-down-menu">
+                    <div class="container">
+                        <ul class="dropdown-menu col-sm-4">
+                            <li><img src="<?php echo get_template_directory_uri(); ?>/images/img15.jpg" class="img-responsive"> </li>
+                        </ul>
 
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+                        <ul class="dropdown-menu col-sm-3">
+                            <li class="head"><a href="#">product header</a></li>
+                            <li><a href="#">Submenu link 1</a></li>
+                            <li><a href="#">Submenu link 2</a></li>
+                            <li><a href="#">Submenu link 3</a></li>
+                            <li><a href="#">Submenu link 4</a></li>
+                        </ul>
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
+                        <ul class="dropdown-menu col-sm-3">
+                            <li class="head"><a href="#">product header</a></li>
+                            <li><a href="#">Submenu link 1</a></li>
+                            <li><a href="#">Submenu link 2</a></li>
+                            <li><a href="#">Submenu link 3</a></li>
+                            <li><a href="#">Submenu link 4</a></li>
+                        </ul>
+                    </div>
 
-	</header><!-- #masthead -->
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">ladies
+                    <span class="caret"></span></a>
+                <div class="mega-drop-down-menu">
+                    <div class="container">
+                        <ul class="dropdown-menu col-sm-4">
+                            <li><img src="<?php echo get_template_directory_uri(); ?>/images/img14.jpg" class="img-responsive"> </li>
+                        </ul>
 
-	<?php
+                        <ul class="dropdown-menu col-sm-3">
+                            <li class="head"><a href="#">product header</a></li>
+                            <li><a href="#">Submenu link 1</a></li>
+                            <li><a href="#">Submenu link 2</a></li>
+                            <li><a href="#">Submenu link 3</a></li>
+                            <li><a href="#">Submenu link 4</a></li>
+                        </ul>
 
-	/*
-	 * If a regular post or page, and not the front page, show the featured image.
-	 * Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
-	 */
-	if ( ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
-		echo '<div class="single-featured-image-header">';
-		echo get_the_post_thumbnail( get_queried_object_id(), 'twentyseventeen-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
-	?>
+                        <ul class="dropdown-menu col-sm-3">
+                            <li class="head"><a href="#">product header</a></li>
+                            <li><a href="#">Submenu link 1</a></li>
+                            <li><a href="#">Submenu link 2</a></li>
+                            <li><a href="#">Submenu link 3</a></li>
+                            <li><a href="#">Submenu link 4</a></li>
+                        </ul>
 
-	<div class="site-content-contain">
-		<div id="content" class="site-content">
+                        <ul class="dropdown-menu col-sm-2">
+                            <li class="head"><a href="#">product header</a></li>
+                            <li><a href="#">Submenu link 1</a></li>
+                            <li><a href="#">Submenu link 2</a></li>
+                            <li><a href="#">Submenu link 3</a></li>
+                            <li><a href="#">Submenu link 4</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </li>
+            <li><a href="#">handicrafts</a></li>
+            <li><a href="#">collection</a></li>
+            <li><a href="#">sale</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <div class="nav-magnifier"><i class="fa fa-search"></i> </div>
+                <form>
+                    <input type="text" placeholder="Search">
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="mynav" data-spy="affix" data-offset="500">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-xs-4">
+                <div class="hamburger"><i class="fa fa-bars"></i> </div>
+                <div class="cross" style="display: none"><i class="fa fa-close"></i></div>
+            </div>
+            <div class="col-sm-4 col-xs-4">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="img-responsive logo">
+            </div>
+            <div class="col-sm-4 col-xs-4 search">
+                <div class="show-magnifier"><i class="fa fa-search"></i></div>
+                <div class="show-cross" style="display: none;"><i class="fa fa-close"></i></div>
+                <form style="display: none">
+                    <input type="text" placeholder="hit enter to search">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="sidemenu">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#men">
+                            men <span><i class="fa fa-caret-down"></i> </span></a>
+                    </h4>
+                </div>
+                <div id="men" class="panel-collapse collapse" aria-expanded="false">
+                    <ul class="panel-body list-unstyled">
+                        <li><a href="">submenu link1</a></li>
+                        <li><a href="">submenu link1</a></li>
+                        <li><a href="">submenu link1</a></li>
+                        <li><a href="">submenu link1</a></li>
+                        <li><a href="">submenu link1</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#women">
+                            ladies <span><i class="fa fa-caret-down"></i> </span></a>
+                    </h4>
+                </div>
+                <div id="women" class="panel-collapse collapse">
+                    <ul class="panel-body list-unstyled">
+                        <li><a href="">submenu link1</a></li>
+                        <li><a href="">submenu link1</a></li>
+                        <li><a href="">submenu link1</a></li>
+                        <li><a href="">submenu link1</a></li>
+                        <li><a href="">submenu link1</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#">
+                            handicraft</a>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#">
+                            collection</a>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#">
+                            sale</a>
+                    </h4>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
