@@ -50,6 +50,11 @@
         'order' => 'DESC'
     ]);
 //    echo '<pre>'; print_r($top_rated_products); echo '</pre>';
+
+
+
+
+
     if($top_rated_products != null){
         ?>
         <div class="container">
@@ -59,7 +64,11 @@
                     <div class="brdr"></div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row products--top-rated">
+                <?php echo do_shortcode('[top_rated_products per_page="8"] '); ?>
+
+<BR><BR><BR><BR><BR><BR><BR>
+
                 <?php foreach ($top_rated_products as $key => $top_rated_product){ ?>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="hover">

@@ -581,3 +581,17 @@ function custom_widgets_areas(){
 }
 add_action( 'widgets_init', 'custom_widgets_areas' );
 
+
+
+function so_34845641_move_title(){
+	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40    );
+	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 10    );
+}
+add_action( 'woocommerce_before_single_product', 'so_34845641_move_title' );
+add_action('woocommerce_single_product_summary', function() {
+	global $product;
+	$stock_status = $product->get_stock_status();
+	$stock_status = ($stock_status == 'outofstock') ? 'Out of Stock' : 'In Stock';
+	echo 'Availablilty: '.$stock_status;
+}, 10);

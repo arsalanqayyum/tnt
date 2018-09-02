@@ -21,28 +21,35 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( $related_products ) : ?>
-
-	<section class="related products">
-
-		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
-
-		<?php woocommerce_product_loop_start(); ?>
-
-			<?php foreach ( $related_products as $related_product ) : ?>
-
-				<?php
-				 	$post_object = get_post( $related_product->get_id() );
-
-					setup_postdata( $GLOBALS['post'] =& $post_object );
-
-					wc_get_template_part( 'content', 'product' ); ?>
-
-			<?php endforeach; ?>
-
-		<?php woocommerce_product_loop_end(); ?>
-
-	</section>
-
+    <div class="related products col-lg-2 col-md-12 col-sm-11 col-xs-11">
+        <h5 class="related"><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h5>
+	    <?php woocommerce_product_loop_start(); ?>
+	    <?php foreach ( $related_products as $related_product ) : ?>
+		    <?php
+                $post_object = get_post( $related_product->get_id() );
+                setup_postdata( $GLOBALS['post'] =& $post_object );
+                if(is_singular('product')){
+                    $thumb = get_the_post_thumbnail_url($post_object->ID);
+	                $product = wc_get_product( $post_object->ID );
+	                $stock_status = $product->get_stock_status();
+	                if(!empty($thumb)){
+	                    ?>
+                            <div class="related-product">
+                                <img src="<?php echo $thumb; ?>">
+                            </div>
+                            <div class="related-detail">
+                                <p class="head"><?php echo $post_object->post_title; ?></p>
+                                <p class="text"><?php echo ($stock_status == 'outofstock') ? 'Not Available' : 'Available'; ?></p>
+                                <p class="price"><?php echo $product->get_price_html(); ?></p>
+                            </div>
+                        <?php
+                    }
+                } else{
+	                wc_get_template_part( 'content', 'product' );
+                }
+		    ?>
+	    <?php endforeach; ?>
+	    <?php woocommerce_product_loop_end(); ?>
+    </div>
 <?php endif;
-
 wp_reset_postdata();

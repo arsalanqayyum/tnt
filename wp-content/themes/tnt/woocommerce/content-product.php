@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li <?php wc_product_class(); ?>>
+<li <?php if(is_singular('product')){ echo 'class="item"'; } else{ wc_product_class(); } ?>>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
