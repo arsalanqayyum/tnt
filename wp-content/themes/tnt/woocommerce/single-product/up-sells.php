@@ -22,8 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $upsells ) : ?>
 
-    <hr>
-    <div class="container-fluid upsell">
+    <div class="upsell">
         <div class="row">
             <div class="col-sm-12">
                 <h1>people also <span>like</span></h1>

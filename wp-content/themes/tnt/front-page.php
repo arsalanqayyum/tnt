@@ -84,7 +84,9 @@ if($sliders != null){ ?>
                     <div id="owl-demo">
                         <?php foreach ($new_arrivals as $new_arrival){ ?>
                             <div class="item">
-                                <img src="<?php echo get_the_post_thumbnail_url($new_arrival->ID, 'thumbnail_500') ?>" class="img-responsive">
+                                <a href="<?php echo get_permalink($new_arrival->ID); ?>">
+                                    <img src="<?php echo get_the_post_thumbnail_url($new_arrival->ID, 'thumbnail_500') ?>" class="img-responsive">
+                                </a>
                             </div>
                         <?php } ?>
                     </div>
@@ -115,7 +117,9 @@ if($sliders != null){ ?>
                     <div id="owl-demo-2">
                         <?php foreach ($best_selling as $item) { ?>
                             <div class="item">
-                                <img src="<?php echo get_the_post_thumbnail_url($item->ID, 'thumbnail_500') ?>" class="img-responsive">
+                                <a href="<?php echo get_permalink($item->ID); ?>">
+                                    <img src="<?php echo get_the_post_thumbnail_url($item->ID, 'thumbnail_500') ?>" class="img-responsive">
+                                </a>
                             </div>
                         <?php } ?>
                     </div>

@@ -28,52 +28,99 @@ if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
 }
+global $product;
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
 
-    <div class="col-lg-5 col-md-6 col-sm-12">
-        <div class="product-gallery">
-	        <?php
-                /**
-                 * Hook: woocommerce_before_single_product_summary.
-                 *
-                 * @hooked woocommerce_show_product_sale_flash - 10
-                 * @hooked woocommerce_show_product_images - 20
-                 */
-                do_action( 'woocommerce_before_single_product_summary' );
-	        ?>
-        </div>
-    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <div class="product-gallery">
+                    <?php
+                    /**
+                     * Hook: woocommerce_before_single_product_summary.
+                     *
+                     * @hooked woocommerce_show_product_sale_flash - 10
+                     * @hooked woocommerce_show_product_images - 20
+                     */
+                    do_action( 'woocommerce_before_single_product_summary' );
+                    ?>
+                </div>
+            </div>
 
-    <div class="col-lg-5 col-md-6 col-sm-12 prod-heads">
-        <div class="summary entry-summary">
-		    <?php
-                /**
-                 * Hook: woocommerce_single_product_summary.
-                 *
-                 * @hooked woocommerce_template_single_title - 5
-                 * @hooked woocommerce_template_single_rating - 10
-                 * @hooked woocommerce_template_single_price - 10
-                 * @hooked woocommerce_template_single_excerpt - 20
-                 * @hooked woocommerce_template_single_add_to_cart - 30
-                 * @hooked woocommerce_template_single_meta - 40
-                 * @hooked woocommerce_template_single_sharing - 50
-                 * @hooked WC_Structured_Data::generate_product_data() - 60
-                 */
-                do_action( 'woocommerce_single_product_summary' );
-		    ?>
+            <div class="col-lg-5 col-md-6 col-sm-12 prod-heads">
+                <div class="summary entry-summary">
+                    <?php
+                    /**
+                     * Hook: woocommerce_single_product_summary.
+                     *
+                     * @hooked woocommerce_template_single_title - 5
+                     * @hooked woocommerce_template_single_rating - 10
+                     * @hooked woocommerce_template_single_price - 10
+                     * @hooked woocommerce_template_single_excerpt - 20
+                     * @hooked woocommerce_template_single_add_to_cart - 30
+                     * @hooked woocommerce_template_single_meta - 40
+                     * @hooked woocommerce_template_single_sharing - 50
+                     * @hooked WC_Structured_Data::generate_product_data() - 60
+                     */
+                    do_action( 'woocommerce_single_product_summary' );
+                    ?>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-12 col-sm-11 col-xs-11">
+                <?php
+                    $related_products = wc_get_related_products($product->get_id(), 12);
+                    if($related_products != null){
+                        ?>
+                        <p class="related"><?php esc_html_e( 'Related products', 'woocommerce' ); ?></p>
+                        <?php
+                        woocommerce_product_loop_start();
+                        foreach ( $related_products as $related_product ) {
+                            $post_object = get_post( $related_product );
+                            setup_postdata( $GLOBALS['post'] =& $post_object );
+                            if(is_singular('product')){
+                                $thumb = get_the_post_thumbnail_url($post_object->ID);
+                                $product = wc_get_product( $post_object->ID );
+                                $stock_status = $product->get_stock_status();
+                                if(!empty($thumb)){
+                                    ?>
+                                    <div class="related-product">
+                                        <img src="<?php echo $thumb; ?>">
+                                    </div>
+                                    <div class="related-detail">
+                                        <p class="head"><?php echo $post_object->post_title; ?></p>
+                                        <p class="text"><?php echo ($stock_status == 'outofstock') ? 'Not Available' : 'Available'; ?></p>
+                                        <p class="price"><?php echo $product->get_price_html(); ?></p>
+                                    </div>
+                                    <?php
+                                }
+                            } else{
+                                wc_get_template_part( 'content', 'product' );
+                            }
+                        }
+                        woocommerce_product_loop_end();
+                    }
+                ?>
+            </div>
         </div>
     </div>
-    <?php
-        /**
-         * Hook: woocommerce_after_single_product_summary.
-         *
-         * @hooked woocommerce_output_product_data_tabs - 10
-         * @hooked woocommerce_upsell_display - 15
-         * @hooked woocommerce_output_related_products - 20
-         */
-        do_action( 'woocommerce_after_single_product_summary' );
-    ?>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <?php
+                    /**
+                     * Hook: woocommerce_after_single_product_summary.
+                     *
+                     * @hooked woocommerce_output_product_data_tabs - 10
+                     * @hooked woocommerce_upsell_display - 15
+                     * @hooked woocommerce_output_related_products - 20
+                     */
+//                    do_action( 'woocommerce_after_single_product_summary' );
+                ?>
+            </div>
+        </div>
+    </div>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

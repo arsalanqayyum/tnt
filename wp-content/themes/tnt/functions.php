@@ -55,6 +55,8 @@ function twentyseventeen_setup() {
 
 	add_image_size( 'twentyseventeen-thumbnail-avatar', 100, 100, true );
 
+    add_image_size( 'thumbnail_500', 500, 500, true );
+
 	// Set the default content width.
 	$GLOBALS['content_width'] = 525;
 
@@ -585,10 +587,15 @@ add_action( 'widgets_init', 'custom_widgets_areas' );
 
 function so_34845641_move_title(){
 	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
-	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40    );
+	remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 10    );
+    remove_action('woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
 }
 add_action( 'woocommerce_before_single_product', 'so_34845641_move_title' );
+
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+//add_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 10);
+
 add_action('woocommerce_single_product_summary', function() {
 	global $product;
 	$stock_status = $product->get_stock_status();

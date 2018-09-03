@@ -140,4 +140,18 @@ a{
       font-family: calibri;
     }
   }
+  p{
+    &.related{
+      font-family: Calibri;
+    }
+  }
+  .related-detail{
+    .head, .text{
+      font-family: Calibri;
+    }
+    .price{
+      color: $red !important;
+      font-size: 16px !important;
+    }
+  }
 }
