@@ -30,7 +30,7 @@ if ( post_password_required() ) {
 }
 global $product;
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class('single-product-content-area'); ?>>
 
     <div class="container">
         <div class="row">
@@ -67,9 +67,10 @@ global $product;
                     ?>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-12 col-sm-11 col-xs-11">
-                <?php
-                    $related_products = wc_get_related_products($product->get_id(), 12);
+            <div class="col-lg-2 col-md-12 col-sm-12">
+                <div class="related-product-container">
+                    <?php
+                    $related_products = wc_get_related_products($product->get_id(), 6);
                     if($related_products != null){
                         ?>
                         <p class="related"><?php esc_html_e( 'Related products', 'woocommerce' ); ?></p>
@@ -84,13 +85,15 @@ global $product;
                                 $stock_status = $product->get_stock_status();
                                 if(!empty($thumb)){
                                     ?>
-                                    <div class="related-product">
-                                        <img src="<?php echo $thumb; ?>">
-                                    </div>
-                                    <div class="related-detail">
-                                        <p class="head"><?php echo $post_object->post_title; ?></p>
-                                        <p class="text"><?php echo ($stock_status == 'outofstock') ? 'Not Available' : 'Available'; ?></p>
-                                        <p class="price"><?php echo $product->get_price_html(); ?></p>
+                                    <div class="row related-product-item">
+                                        <div class="col-xs-4 related-product">
+                                            <img src="<?php echo $thumb; ?>">
+                                        </div>
+                                        <div class="col-xs-8 related-detail">
+                                            <p class="head"><?php echo $post_object->post_title; ?></p>
+                                            <p class="text"><?php echo ($stock_status == 'outofstock') ? 'Not Available' : 'Available'; ?></p>
+                                            <p class="price"><?php echo $product->get_price_html(); ?></p>
+                                        </div>
                                     </div>
                                     <?php
                                 }
@@ -100,7 +103,8 @@ global $product;
                         }
                         woocommerce_product_loop_end();
                     }
-                ?>
+                    ?>
+                </div>
             </div>
         </div>
     </div>
@@ -116,7 +120,7 @@ global $product;
                      * @hooked woocommerce_upsell_display - 15
                      * @hooked woocommerce_output_related_products - 20
                      */
-//                    do_action( 'woocommerce_after_single_product_summary' );
+                    do_action( 'woocommerce_after_single_product_summary' );
                 ?>
             </div>
         </div>
