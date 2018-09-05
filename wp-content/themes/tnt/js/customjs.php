@@ -25,6 +25,11 @@
                 ]
             });
         <?php } if(is_singular('product')){ ?>
+            var container_upsell_content = $('#container--upsell').html();
+            $('#container--upsell').remove();
+            $('.single-product-content-area').append(container_upsell_content);
+            $('.single-product-content-area .upsell ul.products').attr('id', 'owl-demo-3');
+            $('.single-product-content-area .upsell ul.products li.item').addClass('product-item col-xs-12');
             $("#owl-demo-3").owlCarousel({
                 autoPlay: true, //Set AutoPlay to 3 seconds
                 items : 4,
@@ -36,6 +41,10 @@
                     "<i class='fa fa-chevron-right'></i>"
                 ]
             });
+            var reviews_summary = $('#reviews_summary');
+            $('#reviews_summary').remove();
+            $('.single-product-content-area .product-gallery').append(reviews_summary);
+
         <?php } ?>
 	});
 </script>

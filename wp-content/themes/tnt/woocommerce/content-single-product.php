@@ -28,10 +28,26 @@ if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
 }
-global $product;
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('single-product-content-area'); ?>>
-
+    <div id="container--upsell">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <?php
+                    /**
+                     * Hook: woocommerce_after_single_product_summary.
+                     *
+                     * @hooked woocommerce_output_product_data_tabs - 10
+                     * @hooked woocommerce_upsell_display - 15
+                     * @hooked woocommerce_output_related_products - 20
+                     */
+                    do_action( 'woocommerce_after_single_product_summary' );
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-6 col-sm-12">
@@ -70,6 +86,7 @@ global $product;
             <div class="col-lg-2 col-md-12 col-sm-12">
                 <div class="related-product-container">
                     <?php
+                    global $product;
                     $related_products = wc_get_related_products($product->get_id(), 6);
                     if($related_products != null){
                         ?>
@@ -85,16 +102,18 @@ global $product;
                                 $stock_status = $product->get_stock_status();
                                 if(!empty($thumb)){
                                     ?>
-                                    <div class="row related-product-item">
-                                        <div class="col-xs-4 related-product">
-                                            <img src="<?php echo $thumb; ?>">
+                                    <a href="<?php echo get_permalink($post_object->ID); ?>">
+                                        <div class="row related-product-item">
+                                            <div class="col-xs-4 related-product">
+                                                <img src="<?php echo $thumb; ?>">
+                                            </div>
+                                            <div class="col-xs-8 related-detail">
+                                                <p class="head"><?php echo $post_object->post_title; ?></p>
+                                                <p class="text"><?php echo ($stock_status == 'outofstock') ? 'Not Available' : 'Available'; ?></p>
+                                                <p class="price"><?php echo $product->get_price_html(); ?></p>
+                                            </div>
                                         </div>
-                                        <div class="col-xs-8 related-detail">
-                                            <p class="head"><?php echo $post_object->post_title; ?></p>
-                                            <p class="text"><?php echo ($stock_status == 'outofstock') ? 'Not Available' : 'Available'; ?></p>
-                                            <p class="price"><?php echo $product->get_price_html(); ?></p>
-                                        </div>
-                                    </div>
+                                    </a>
                                     <?php
                                 }
                             } else{
@@ -105,23 +124,6 @@ global $product;
                     }
                     ?>
                 </div>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <?php
-                    /**
-                     * Hook: woocommerce_after_single_product_summary.
-                     *
-                     * @hooked woocommerce_output_product_data_tabs - 10
-                     * @hooked woocommerce_upsell_display - 15
-                     * @hooked woocommerce_output_related_products - 20
-                     */
-                    do_action( 'woocommerce_after_single_product_summary' );
-                ?>
             </div>
         </div>
     </div>

@@ -29,17 +29,15 @@ if ( $upsells ) : ?>
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="owl">
-                    <?php woocommerce_product_loop_start(); ?>
-                    <?php foreach ( $upsells as $upsell ) : ?>
-                        <?php
-                            $post_object = get_post( $upsell->get_id() );
-                            setup_postdata( $GLOBALS['post'] =& $post_object );
-                            wc_get_template_part( 'content', 'product' );
-                        ?>
-                    <?php endforeach; ?>
-                    <?php woocommerce_product_loop_end(); ?>
-                </div>
+                <?php woocommerce_product_loop_start(); ?>
+                <?php foreach ( $upsells as $upsell ) : ?>
+                    <?php
+                    $post_object = get_post( $upsell->get_id() );
+                    setup_postdata( $GLOBALS['post'] =& $post_object );
+                    wc_get_template_part( 'content', 'product' );
+                    ?>
+                <?php endforeach; ?>
+                <?php woocommerce_product_loop_end(); ?>
             </div>
         </div>
     </div>
