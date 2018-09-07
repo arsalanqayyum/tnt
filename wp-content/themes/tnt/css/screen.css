@@ -274,13 +274,13 @@
   .carousel-inner h1 {
     padding-top: 100px !important; }
 
-  .item .button, .item .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .item .add_to_wishlist {
+  .item .button, .item .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .item .add_to_wishlist {
     top: 250px !important; } }
 @media screen and (max-width: 898px) {
   .carousel-inner h1 {
     display: none !important; }
 
-  .item .button, .item .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .item .add_to_wishlist {
+  .item .button, .item .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .item .add_to_wishlist {
     display: none; } }
 @media screen and (max-width: 513px) {
   .carousel-control {
@@ -317,7 +317,7 @@ a span.glyphicon-menu-right {
   text-transform: capitalize;
   text-shadow: 0px 2px 2px #171717; }
 
-.item .button, .item .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .item .add_to_wishlist {
+.item .button, .item .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .item .add_to_wishlist {
   position: absolute;
   top: 300px;
   left: 0;
@@ -325,7 +325,7 @@ a span.glyphicon-menu-right {
   margin: auto;
   text-align: center; }
 
-.item .button a, .item .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist a, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .item .add_to_wishlist a {
+.item .button a, .item .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist a, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .item .add_to_wishlist a {
   background-color: #FFFFFF;
   padding-left: 30px;
   padding-right: 30px;
@@ -336,7 +336,7 @@ a span.glyphicon-menu-right {
   text-transform: uppercase;
   color: #2d2d2d; }
 
-.item .button a:hover, .item .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist a:hover, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .item .add_to_wishlist a:hover {
+.item .button a:hover, .item .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist a:hover, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .item .add_to_wishlist a:hover {
   background-color: #e44444;
   color: #FFFFFF;
   text-decoration: none;
@@ -360,7 +360,7 @@ h1 span {
   margin: auto;
   margin-bottom: 30px; }
 
-.stars, .products--top-rated .product-item .woocommerce-loop-product__link .star-rating, .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating, .single-product-content-area .summary .woocommerce-product-rating .star-rating {
+.stars, .products--top-rated .product-item .woocommerce-loop-product__link .star-rating, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating, .single-product .single-product-content-area .summary .woocommerce-product-rating .star-rating, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .star-rating {
   margin: auto;
   text-align: center;
   color: #e44444;
@@ -380,12 +380,12 @@ h1 span {
   font-size: 23px;
   color: rgba(202, 202, 202, 0.6784313725); }
 
-.all-review {
+.all-review, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-reply-title {
   font-family: calibri;
   text-transform: capitalize;
   font-weight: bold; }
 
-.title, .products--top-rated .product-item .woocommerce-loop-product__link .woocommerce-loop-product__title, .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .woocommerce-loop-product__title {
+.title, .products--top-rated .product-item .woocommerce-loop-product__link .woocommerce-loop-product__title, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .woocommerce-loop-product__title {
   margin: auto;
   font-family: calibri;
   font-size: 20px;
@@ -403,13 +403,13 @@ h1 span {
   text-align: center;
   margin-bottom: 15px; }
 
-.cart, .single-product-content-area .summary .yith-wcwl-add-to-wishlist {
+.cart, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist {
   margin: auto;
   margin-bottom: 30px;
   display: block;
   text-align: center; }
 
-.cart a, .single-product-content-area .summary .yith-wcwl-add-to-wishlist a {
+.cart a, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist a {
   background-color: #e44444;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -421,7 +421,7 @@ h1 span {
   font-size: 12px;
   border: 1px solid #e44444; }
 
-.cart a:hover, .single-product-content-area .summary .yith-wcwl-add-to-wishlist a:hover {
+.cart a:hover, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist a:hover {
   background-color: transparent;
   color: #e44444;
   border: 1px solid #e44444;
@@ -664,7 +664,7 @@ footer input {
   opacity: 1; }
 
 @media screen and (max-width: 992px) {
-  .prod-heads h1, .gal-star, .new-price, .single-product-content-area .summary .price ins, .old-price, .single-product-content-area .summary .price del {
+  .prod-heads h1, .gal-star, .new-price, .single-product .single-product-content-area .summary .price ins, .old-price, .single-product .single-product-content-area .summary .price del {
     text-align: center !important;
     display: block !important;
     margin-left: 0px !important; }
@@ -704,7 +704,7 @@ footer input {
 .single .size-align li {
   margin-bottom: 10px; }
 
-.old-price, .single-product-content-area .summary .price del {
+.old-price, .single-product .single-product-content-area .summary .price del {
   display: inline;
   font-family: fantasy;
   font-size: 19px;
@@ -712,25 +712,25 @@ footer input {
   color: #828282;
   text-decoration: line-through; }
 
-.new-price, .single-product-content-area .summary .price ins {
+.new-price, .single-product .single-product-content-area .summary .price ins {
   display: inline;
   font-family: fantasy;
   font-size: 22px;
   color: #e44444;
   margin-left: 20px; }
 
-.text, .single-product-content-area .summary .woocommerce-product-details__short-description {
+.text, .single-product .single-product-content-area .summary .woocommerce-product-details__short-description {
   font-size: 17px;
   color: #828282; }
 
-.text a, .single-product-content-area .summary .woocommerce-product-details__short-description a {
+.text a, .single-product .single-product-content-area .summary .woocommerce-product-details__short-description a {
   display: block;
   text-transform: capitalize;
   margin-top: 10px;
   font-size: 16px;
   cursor: pointer; }
 
-.text a span, .single-product-content-area .summary .woocommerce-product-details__short-description a span {
+.text a span, .single-product .single-product-content-area .summary .woocommerce-product-details__short-description a span {
   float: right;
   padding-top: 10px; }
 
@@ -828,7 +828,7 @@ label.btn:hover {
   -webkit-appearance: none;
   margin: 0; }
 
-.related, .single-product-content-area .woocommerce-tabs .panel h2, .single-product-content-area .product-gallery #reviews_summary h3 {
+.related, .single-product .single-product-content-area .woocommerce-tabs .panel h2, .single-product .single-product-content-area .product-gallery #reviews_summary h3 {
   font-size: 16px;
   font-weight: bold;
   border-bottom: 1px solid;
@@ -854,7 +854,7 @@ label.btn:hover {
   color: #828282;
   margin: auto; }
 
-.related-detail p.text, .related-detail .single-product-content-area .summary p.woocommerce-product-details__short-description, .single-product-content-area .summary .related-detail p.woocommerce-product-details__short-description {
+.related-detail p.text, .related-detail .single-product .single-product-content-area .summary p.woocommerce-product-details__short-description, .single-product .single-product-content-area .summary .related-detail p.woocommerce-product-details__short-description {
   font-size: 14px;
   margin: auto; }
 
@@ -1188,13 +1188,13 @@ label.btn:hover {
 .mycart .cart-bg {
   border: 1px solid #0000002b; }
 
-.mycart .cart-bg .title, .mycart .cart-bg .products--top-rated .product-item .woocommerce-loop-product__link .woocommerce-loop-product__title, .products--top-rated .product-item .woocommerce-loop-product__link .mycart .cart-bg .woocommerce-loop-product__title, .mycart .cart-bg .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .woocommerce-loop-product__title, .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .mycart .cart-bg .woocommerce-loop-product__title {
+.mycart .cart-bg .title, .mycart .cart-bg .products--top-rated .product-item .woocommerce-loop-product__link .woocommerce-loop-product__title, .products--top-rated .product-item .woocommerce-loop-product__link .mycart .cart-bg .woocommerce-loop-product__title, .mycart .cart-bg .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .woocommerce-loop-product__title, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .mycart .cart-bg .woocommerce-loop-product__title {
   text-align: left; }
 
 .mycart .cart-bg img {
   width: 150px; }
 
-.mycart .cart-bg ul.stars, .mycart .cart-bg .products--top-rated .product-item .woocommerce-loop-product__link ul.star-rating, .products--top-rated .product-item .woocommerce-loop-product__link .mycart .cart-bg ul.star-rating, .mycart .cart-bg .single-product-content-area .upsell .product-item .woocommerce-loop-product__link ul.star-rating, .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .mycart .cart-bg ul.star-rating, .mycart .cart-bg .single-product-content-area .summary .woocommerce-product-rating ul.star-rating, .single-product-content-area .summary .woocommerce-product-rating .mycart .cart-bg ul.star-rating {
+.mycart .cart-bg ul.stars, .mycart .cart-bg .products--top-rated .product-item .woocommerce-loop-product__link ul.star-rating, .products--top-rated .product-item .woocommerce-loop-product__link .mycart .cart-bg ul.star-rating, .mycart .cart-bg .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link ul.star-rating, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .mycart .cart-bg ul.star-rating, .mycart .cart-bg .single-product .single-product-content-area .summary .woocommerce-product-rating ul.star-rating, .single-product .single-product-content-area .summary .woocommerce-product-rating .mycart .cart-bg ul.star-rating, .mycart .cart-bg .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text ul.star-rating, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .mycart .cart-bg ul.star-rating {
   text-align: left;
   margin-bottom: 10px; }
 
@@ -1376,10 +1376,18 @@ label.btn:hover {
 a:hover, a:focus, a:active {
   text-decoration: none !important; }
 
-.calibri, .btn-cart, .products--top-rated .product-item .button, .single-product-content-area .upsell .product-item .button, .products--top-rated .product-item .added_to_cart, .single-product-content-area .upsell .product-item .added_to_cart, .single-product-content-area .summary .cart .button, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist, .single-product-content-area .product-gallery #reviews_summary *, .single-product-content-area .product-gallery #reviews_summary .reviews_bar .ywar_perc_rating span, .single-product-content-area .summary .stock-status, .single-product-content-area .summary .cart.variations_form .variations tr .label, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .label, .single-product-content-area .summary .sku_wrapper, .single-product-content-area .summary .posted_in, .single-product-content-area .summary .tagged_as, .single-product-content-area .summary .woocommerce-product-details__short-description, .single-product-content-area .related-product-container p.related, .single-product-content-area .related-product-container .related-product-item .related-detail .head, .single-product-content-area .related-product-container .related-product-item .related-detail .text, .single-product-content-area .related-product-container .related-product-item .related-detail .summary .woocommerce-product-details__short-description, .single-product-content-area .summary .related-product-container .related-product-item .related-detail .woocommerce-product-details__short-description {
+.btn-cart, .default-btn, .modal .modal-body .login-submit .button, .products--top-rated .product-item .button, .single-product .single-product-content-area .upsell .product-item .button, .products--top-rated .product-item .added_to_cart, .single-product .single-product-content-area .upsell .product-item .added_to_cart, .single-product .single-product-content-area .summary .cart .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist, .single-product .single-product-content-area .product-gallery #reviews_summary *, .single-product .single-product-content-area .product-gallery #reviews_summary .reviews_bar .ywar_perc_rating span, .single-product .single-product-content-area .summary .stock-status, .single-product .single-product-content-area .summary .cart.variations_form .variations tr .label, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .label, .single-product .single-product-content-area .summary .sku_wrapper, .single-product .single-product-content-area .summary .posted_in, .single-product .single-product-content-area .summary .tagged_as, .single-product .single-product-content-area .summary .woocommerce-product-details__short-description, .single-product .single-product-content-area .related-product-container p.related, .single-product .single-product-content-area .related-product-container .related-product-item .related-detail .head, .single-product .single-product-content-area .related-product-container .related-product-item .related-detail .text, .single-product .single-product-content-area .related-product-container .related-product-item .related-detail .summary .woocommerce-product-details__short-description, .single-product .single-product-content-area .summary .related-product-container .related-product-item .related-detail .woocommerce-product-details__short-description, .single-product .yith-woocommerce-advanced-reviews .commentlist li {
   font-family: Calibri; }
 
-.btn-cart, .products--top-rated .product-item .button, .single-product-content-area .upsell .product-item .button, .products--top-rated .product-item .added_to_cart, .single-product-content-area .upsell .product-item .added_to_cart, .single-product-content-area .summary .cart .button, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist {
+.single-product .yith-woocommerce-advanced-reviews h1:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.btn-cart, .default-btn, .modal .modal-body .login-submit .button, .products--top-rated .product-item .button, .single-product .single-product-content-area .upsell .product-item .button, .products--top-rated .product-item .added_to_cart, .single-product .single-product-content-area .upsell .product-item .added_to_cart, .single-product .single-product-content-area .summary .cart .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist {
   background-color: #e44444;
   padding: 10px 15px;
   color: #fff;
@@ -1390,7 +1398,7 @@ a:hover, a:focus, a:active {
   -moz-border-radius: 0;
   border-radius: 0;
   font-weight: 500; }
-  .btn-cart:before, .products--top-rated .product-item .button:before, .single-product-content-area .upsell .product-item .button:before, .products--top-rated .product-item .added_to_cart:before, .single-product-content-area .upsell .product-item .added_to_cart:before, .single-product-content-area .summary .cart .button:before, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button:before, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:before {
+  .btn-cart:before, .default-btn:before, .modal .modal-body .login-submit .button:before, .products--top-rated .product-item .button:before, .single-product .single-product-content-area .upsell .product-item .button:before, .products--top-rated .product-item .added_to_cart:before, .single-product .single-product-content-area .upsell .product-item .added_to_cart:before, .single-product .single-product-content-area .summary .cart .button:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:before {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
@@ -1399,86 +1407,97 @@ a:hover, a:focus, a:active {
     -moz-osx-font-smoothing: grayscale;
     content: "\f217";
     margin-right: 5px; }
-  .btn-cart:hover, .products--top-rated .product-item .button:hover, .single-product-content-area .upsell .product-item .button:hover, .products--top-rated .product-item .added_to_cart:hover, .single-product-content-area .upsell .product-item .added_to_cart:hover, .single-product-content-area .summary .cart .button:hover, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button:hover, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:hover {
+  .btn-cart:hover, .default-btn:hover, .modal .modal-body .login-submit .button:hover, .products--top-rated .product-item .button:hover, .single-product .single-product-content-area .upsell .product-item .button:hover, .products--top-rated .product-item .added_to_cart:hover, .single-product .single-product-content-area .upsell .product-item .added_to_cart:hover, .single-product .single-product-content-area .summary .cart .button:hover, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button:hover, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:hover {
     background-color: transparent;
     color: #e44444;
     border: 1px solid #e44444;
     text-decoration: none;
     transition: ease-in 0.2s; }
 
-.sale_badge, .products--top-rated .product-item .woocommerce-loop-product__link .onsale, .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .onsale, .single-product-content-area .product-gallery .onsale {
-  padding: 5px 10px;
-  position: absolute;
-  top: 0;
-  left: 15px;
-  height: 25px;
-  border-radius: 0;
-  line-height: 15px;
-  min-width: auto;
-  min-height: auto; }
-
-.font-awesome-family {
+.onsale {
+  padding: 5px 10px !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0px !important;
+  right: auto !important;
+  height: 25px !important;
+  border-radius: 0 !important;
+  line-height: 15px !important;
+  min-width: auto !important;
+  min-height: auto !important;
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  margin: 0 !important; }
 
-.products--top-rated .product-item, .single-product-content-area .upsell .product-item {
+.owl-carousel .onsale {
+  left: 15px !important; }
+
+.default-btn:before, .modal .modal-body .login-submit .button:before, .modal .modal-body .login-submit .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .modal .modal-body .login-submit .add_to_wishlist:before {
+  display: none; }
+
+.modal .modal-header .modal-title {
+  font-size: 18px;
+  font-weight: normal;
+  color: #333; }
+.modal .modal-body .login-password label {
+  margin-top: 15px; }
+.modal .modal-body .login-remember input {
+  width: auto;
+  display: inline; }
+
+.products--top-rated .product-item, .single-product .single-product-content-area .upsell .product-item {
   margin-bottom: 20px;
   text-align: center; }
-  .products--top-rated .product-item .woocommerce-loop-product__link .attachment-woocommerce_thumbnail, .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .attachment-woocommerce_thumbnail {
+  .products--top-rated .product-item .onsale, .single-product .single-product-content-area .upsell .product-item .onsale {
+    left: 15px !important; }
+  .products--top-rated .product-item .woocommerce-loop-product__link .attachment-woocommerce_thumbnail, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .attachment-woocommerce_thumbnail {
     min-height: 333px;
     object-fit: cover; }
-  .products--top-rated .product-item .woocommerce-loop-product__link .woocommerce-loop-product__title, .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .woocommerce-loop-product__title {
+  .products--top-rated .product-item .woocommerce-loop-product__link .woocommerce-loop-product__title, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .woocommerce-loop-product__title {
     color: #333; }
-  .products--top-rated .product-item .woocommerce-loop-product__link .star-rating, .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating {
+  .products--top-rated .product-item .woocommerce-loop-product__link .star-rating, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating {
     margin: 10px auto; }
-    .products--top-rated .product-item .woocommerce-loop-product__link .star-rating:before, .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating:before {
+    .products--top-rated .product-item .woocommerce-loop-product__link .star-rating:before, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating:before {
       color: #e44444; }
-  .products--top-rated .product-item .woocommerce-loop-product__link .price, .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .price {
+  .products--top-rated .product-item .woocommerce-loop-product__link .price, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .price {
     display: block; }
-  .products--top-rated .product-item .added_to_cart, .single-product-content-area .upsell .product-item .added_to_cart {
+  .products--top-rated .product-item .added_to_cart, .single-product .single-product-content-area .upsell .product-item .added_to_cart {
     padding: 9px 15px;
     display: inline; }
 
-.single-product-content-area {
+.single-product .single-product-content-area {
   margin-top: 70px; }
-  .single-product-content-area .woocommerce-tabs {
+  .single-product .single-product-content-area .woocommerce-tabs {
     padding: 50px 50px 0 50px; }
-    .single-product-content-area .woocommerce-tabs .description_tab {
+    .single-product .single-product-content-area .woocommerce-tabs li {
       -webkit-border-radius: 0 !important;
       -moz-border-radius: 0 !important;
       border-radius: 0 !important; }
-    .single-product-content-area .woocommerce-tabs .panel {
+    .single-product .single-product-content-area .woocommerce-tabs .panel {
       padding: 0 30px 30px !important; }
-      .single-product-content-area .woocommerce-tabs .panel h2 {
+      .single-product .single-product-content-area .woocommerce-tabs .panel h2 {
         border-bottom: 0;
         margin-bottom: 10px; }
-  .single-product-content-area .upsell {
+  .single-product .single-product-content-area .upsell {
     padding: 50px 0; }
-    .single-product-content-area .upsell h1 {
+    .single-product .single-product-content-area .upsell h1 {
       text-align: center;
       margin-bottom: 25px; }
-    .single-product-content-area .upsell .product-item img {
+    .single-product .single-product-content-area .upsell .product-item img {
       width: auto !important; }
-    .single-product-content-area .upsell .star-rating {
+    .single-product .single-product-content-area .upsell .star-rating {
       display: none; }
-    .single-product-content-area .upsell .button, .single-product-content-area .upsell .summary .yith-wcwl-add-to-wishlist .add_to_wishlist, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .upsell .add_to_wishlist {
+    .single-product .single-product-content-area .upsell .button, .single-product .single-product-content-area .upsell .summary .yith-wcwl-add-to-wishlist .add_to_wishlist, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .upsell .add_to_wishlist {
       display: inline-block;
       top: 0; }
-  .single-product-content-area .product-gallery {
+  .single-product .single-product-content-area .product-gallery {
     top: 0;
     position: relative; }
-    .single-product-content-area .product-gallery .onsale {
-      left: 0; }
-    .single-product-content-area .product-gallery .flex-control-nav {
+    .single-product .single-product-content-area .product-gallery .flex-control-nav {
       margin-top: 15px !important; }
-      .single-product-content-area .product-gallery .flex-control-nav li {
+      .single-product .single-product-content-area .product-gallery .flex-control-nav li {
         padding-right: 5px;
         padding-left: 5px; }
-        .single-product-content-area .product-gallery .flex-control-nav li img {
+        .single-product .single-product-content-area .product-gallery .flex-control-nav li img {
           opacity: 1 !important;
           display: block;
           padding: 4px;
@@ -1490,118 +1509,207 @@ a:hover, a:focus, a:active {
           -webkit-transition: border .2s ease-in-out;
           -o-transition: border .2s ease-in-out;
           transition: border .2s ease-in-out; }
-    .single-product-content-area .product-gallery #reviews_summary * {
+    .single-product .single-product-content-area .product-gallery #reviews_summary * {
       opacity: 1; }
-    .single-product-content-area .product-gallery #reviews_summary h3 {
+    .single-product .single-product-content-area .product-gallery #reviews_summary h3 {
       border-color: #dadada; }
-    .single-product-content-area .product-gallery #reviews_summary .woocommerce-product-rating {
+    .single-product .single-product-content-area .product-gallery #reviews_summary .woocommerce-product-rating {
       display: none; }
-    .single-product-content-area .product-gallery #reviews_summary .reviews_bar .ywar_stars_value {
+    .single-product .single-product-content-area .product-gallery #reviews_summary .reviews_bar .ywar_stars_value {
       text-transform: capitalize;
       color: #828282;
       font-weight: bold;
       font-size: 14px; }
-    .single-product-content-area .product-gallery #reviews_summary .reviews_bar .ywar_perc_rating {
+    .single-product .single-product-content-area .product-gallery #reviews_summary .reviews_bar .ywar_perc_rating {
       background-color: #5cb85c !important; }
-      .single-product-content-area .product-gallery #reviews_summary .reviews_bar .ywar_perc_rating span {
+      .single-product .single-product-content-area .product-gallery #reviews_summary .reviews_bar .ywar_perc_rating span {
         color: #333 !important; }
-  .single-product-content-area .prod-heads {
+  .single-product .single-product-content-area .prod-heads {
     padding-right: 30px; }
-  .single-product-content-area .summary .product_title {
+  .single-product .single-product-content-area .summary .product_title {
     color: #e44444; }
-    .single-product-content-area .summary .product_title:before {
+    .single-product .single-product-content-area .summary .product_title:before {
       color: #333;
       content: ""; }
-  .single-product-content-area .summary .woocommerce-product-rating {
+  .single-product .single-product-content-area .summary .woocommerce-product-rating {
     margin-bottom: 0 !important; }
-    .single-product-content-area .summary .woocommerce-product-rating .star-rating {
+    .single-product .single-product-content-area .summary .woocommerce-product-rating .star-rating {
       margin: 10px auto; }
-      .single-product-content-area .summary .woocommerce-product-rating .star-rating:before {
+      .single-product .single-product-content-area .summary .woocommerce-product-rating .star-rating:before {
         color: #e44444; }
-    .single-product-content-area .summary .woocommerce-product-rating .woocommerce-review-link {
+    .single-product .single-product-content-area .summary .woocommerce-product-rating .woocommerce-review-link {
       margin: 5px 0;
       display: inline-block;
       color: #e44444; }
-  .single-product-content-area .summary .price {
+  .single-product .single-product-content-area .summary .price {
     text-align: left;
     margin-bottom: 0; }
-    .single-product-content-area .summary .price del {
+    .single-product .single-product-content-area .summary .price del {
       font-weight: normal !important; }
-    .single-product-content-area .summary .price ins {
+    .single-product .single-product-content-area .summary .price ins {
       font-weight: normal !important;
       text-decoration: none; }
-  .single-product-content-area .summary .stock-status, .single-product-content-area .summary .cart.variations_form .variations tr .label, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .label, .single-product-content-area .summary .sku_wrapper, .single-product-content-area .summary .posted_in, .single-product-content-area .summary .tagged_as {
+  .single-product .single-product-content-area .summary .stock-status, .single-product .single-product-content-area .summary .cart.variations_form .variations tr .label, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .label, .single-product .single-product-content-area .summary .sku_wrapper, .single-product .single-product-content-area .summary .posted_in, .single-product .single-product-content-area .summary .tagged_as {
     display: block;
     text-transform: capitalize;
     color: #828282;
     font-weight: bold;
     font-size: 14px; }
-    .single-product-content-area .summary .stock-status span, .single-product-content-area .summary .cart.variations_form .variations tr .label span, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .label span, .single-product-content-area .summary .stock-status a, .single-product-content-area .summary .cart.variations_form .variations tr .label a, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .label a, .single-product-content-area .summary .sku_wrapper span, .single-product-content-area .summary .sku_wrapper a, .single-product-content-area .summary .posted_in span, .single-product-content-area .summary .posted_in a, .single-product-content-area .summary .tagged_as span, .single-product-content-area .summary .tagged_as a {
+    .single-product .single-product-content-area .summary .stock-status span, .single-product .single-product-content-area .summary .cart.variations_form .variations tr .label span, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .label span, .single-product .single-product-content-area .summary .stock-status a, .single-product .single-product-content-area .summary .cart.variations_form .variations tr .label a, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .label a, .single-product .single-product-content-area .summary .sku_wrapper span, .single-product .single-product-content-area .summary .sku_wrapper a, .single-product .single-product-content-area .summary .posted_in span, .single-product .single-product-content-area .summary .posted_in a, .single-product .single-product-content-area .summary .tagged_as span, .single-product .single-product-content-area .summary .tagged_as a {
       color: #e44444; }
-  .single-product-content-area .summary .product_meta {
+  .single-product .single-product-content-area .summary .product_meta {
     margin-bottom: 10px;
     padding-bottom: 15px;
     border-bottom: 1px solid #dadada; }
-  .single-product-content-area .summary .cart, .single-product-content-area .summary .yith-wcwl-add-to-wishlist {
+  .single-product .single-product-content-area .summary .cart, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist {
     display: inline-block; }
-    .single-product-content-area .summary .cart.variations_form, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist {
+    .single-product .single-product-content-area .summary .cart.variations_form, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist {
       position: relative;
       width: 100%;
       margin-bottom: 0 !important; }
-      .single-product-content-area .summary .cart.variations_form .single_variation_wrap, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .single_variation_wrap {
+      .single-product .single-product-content-area .summary .cart.variations_form .single_variation_wrap, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .single_variation_wrap {
         position: absolute;
         bottom: -50px; }
-      .single-product-content-area .summary .cart.variations_form + .yith-wcwl-add-to-wishlist, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist + .yith-wcwl-add-to-wishlist {
+      .single-product .single-product-content-area .summary .cart.variations_form + .yith-wcwl-add-to-wishlist, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist + .yith-wcwl-add-to-wishlist {
         margin-top: 16px;
         left: 183px;
         width: auto;
         position: relative; }
-      .single-product-content-area .summary .cart.variations_form .variations, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations {
+      .single-product .single-product-content-area .summary .cart.variations_form .variations, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations {
         border-bottom: 1px solid #dadada;
         border-top: 1px solid #dadada; }
-        .single-product-content-area .summary .cart.variations_form .variations tr, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr {
+        .single-product .single-product-content-area .summary .cart.variations_form .variations tr, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr {
           padding: 12px 0 15px;
           display: block; }
-          .single-product-content-area .summary .cart.variations_form .variations tr:first-child, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr:first-child {
+          .single-product .single-product-content-area .summary .cart.variations_form .variations tr:first-child, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr:first-child {
             border-bottom: 1px solid #dadada; }
-          .single-product-content-area .summary .cart.variations_form .variations tr .label, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .label {
+          .single-product .single-product-content-area .summary .cart.variations_form .variations tr .label, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .label {
             line-height: 1;
             color: #333;
             text-align: left; }
-          .single-product-content-area .summary .cart.variations_form .variations tr .value, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .value {
+          .single-product .single-product-content-area .summary .cart.variations_form .variations tr .value, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .value {
             line-height: 1; }
-            .single-product-content-area .summary .cart.variations_form .variations tr .value .reset_variations, .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .value .reset_variations {
+            .single-product .single-product-content-area .summary .cart.variations_form .variations tr .value .reset_variations, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .value .reset_variations {
               display: inline-block; }
-    .single-product-content-area .summary .cart .quantity .qty, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .quantity .qty {
+    .single-product .single-product-content-area .summary .cart .quantity .qty, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .quantity .qty {
       height: 35px; }
-    .single-product-content-area .summary .cart .button, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist {
+    .single-product .single-product-content-area .summary .cart .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist {
       background-color: #e44444 !important; }
-      .single-product-content-area .summary .cart .button:hover, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button:hover, .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:hover {
+      .single-product .single-product-content-area .summary .cart .button:hover, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button:hover, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:hover {
         background-color: transparent !important;
         color: #e44444 !important; }
-  .single-product-content-area .summary .yith-wcwl-add-to-wishlist {
+  .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist {
     margin-top: 7px;
     vertical-align: top; }
-    .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist {
+    .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist {
       padding: 9px 15px; }
-      .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:before {
+      .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:before {
         content: "\f004"; }
-  .single-product-content-area .related-product-container p.related {
+    .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .feedback {
+      display: none; }
+  .single-product .single-product-content-area .related-product-container p.related {
     margin-left: -15px; }
-  .single-product-content-area .related-product-container .related-product-item {
+  .single-product .single-product-content-area .related-product-container .related-product-item {
     padding: 7px 0; }
-    .single-product-content-area .related-product-container .related-product-item .related-product {
+    .single-product .single-product-content-area .related-product-container .related-product-item .related-product {
       padding: 0;
       margin-bottom: 0; }
-      .single-product-content-area .related-product-container .related-product-item .related-product img {
+      .single-product .single-product-content-area .related-product-container .related-product-item .related-product img {
         height: 100%;
         width: 100%;
         object-fit: cover;
         margin-right: 0; }
-    .single-product-content-area .related-product-container .related-product-item .related-detail {
+    .single-product .single-product-content-area .related-product-container .related-product-item .related-detail {
       padding-right: 0; }
-      .single-product-content-area .related-product-container .related-product-item .related-detail .price {
+      .single-product .single-product-content-area .related-product-container .related-product-item .related-detail .price {
         color: #e44444 !important;
         font-size: 16px !important; }
+.single-product .yith-woocommerce-advanced-reviews h1 {
+  text-align: center;
+  margin: 50px 0 15px !important; }
+  .single-product .yith-woocommerce-advanced-reviews h1:after {
+    content: "\f005\00a0\00a0\f005\00a0\00a0\f005\00a0\00a0\f005\00a0\00a0\f005";
+    font-size: 23px;
+    color: #dadada;
+    display: block;
+    margin-top: 30px; }
+.single-product .yith-woocommerce-advanced-reviews .btn-write-review {
+  margin: 30px auto 40px; }
+.single-product .yith-woocommerce-advanced-reviews .all-review, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-reply-title {
+  font-size: 18px;
+  color: #333; }
+.single-product .yith-woocommerce-advanced-reviews .commentlist {
+  padding: 0; }
+  .single-product .yith-woocommerce-advanced-reviews .commentlist li {
+    border-top: 1px solid #dadada !important;
+    padding: 20px 15px !important;
+    margin: 0; }
+    .single-product .yith-woocommerce-advanced-reviews .commentlist li .customer-name strong {
+      text-transform: capitalize;
+      font-size: 18px;
+      font-weight: bold;
+      display: block;
+      color: #333; }
+    .single-product .yith-woocommerce-advanced-reviews .commentlist li .customer-name time {
+      font-weight: normal;
+      font-size: 14px;
+      color: #828282; }
+    .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text {
+      padding: 0 !important;
+      border: 0 !important;
+      margin: 0 !important; }
+      .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .star-rating {
+        float: left;
+        margin-bottom: 7px;
+        margin-top: 0; }
+      .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .description {
+        float: left;
+        width: 100%;
+        font-weight: lighter;
+        color: #828282; }
+        .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .description p {
+          margin: 0; }
+          .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .description p .review_title {
+            font-size: 18px;
+            text-transform: capitalize;
+            padding-bottom: 0;
+            font-weight: bold;
+            color: #333; }
+.single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-reply-title {
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 10px; }
+.single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form {
+  padding: 25px 15px;
+  max-width: 50%; }
+  .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title label, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating label, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment label, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section label {
+    display: block;
+    text-transform: capitalize;
+    color: #828282;
+    font-weight: bold;
+    font-size: 14px; }
+  .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .stars, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .products--top-rated .product-item .woocommerce-loop-product__link .star-rating, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .single-product-content-area .summary .woocommerce-product-rating .star-rating, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .commentlist li .comment-text .star-rating, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-title .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .stars, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .products--top-rated .product-item .woocommerce-loop-product__link .star-rating, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .single-product-content-area .summary .woocommerce-product-rating .star-rating, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .commentlist li .comment-text .star-rating, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-rating .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .stars, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .products--top-rated .product-item .woocommerce-loop-product__link .star-rating, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .single-product-content-area .summary .woocommerce-product-rating .star-rating, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .commentlist li .comment-text .star-rating, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-comment .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .stars, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .products--top-rated .product-item .woocommerce-loop-product__link .star-rating, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .single-product-content-area .summary .woocommerce-product-rating .star-rating, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .commentlist li .comment-text .star-rating, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .upload_section .star-rating {
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 0 !important; }
+    .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .stars .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-1, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-1, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-1, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .commentlist li .comment-text .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-title .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .stars .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-2, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-2, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-2, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .commentlist li .comment-text .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-title .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .stars .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-3, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-3, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-3, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .commentlist li .comment-text .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-title .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .stars .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-4, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-4, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-4, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .commentlist li .comment-text .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-title .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .stars .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-5, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-5, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-5, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title .commentlist li .comment-text .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-title .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .stars .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-1, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-1, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-1, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .commentlist li .comment-text .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-rating .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .stars .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-2, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-2, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-2, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .commentlist li .comment-text .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-rating .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .stars .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-3, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-3, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-3, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .commentlist li .comment-text .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-rating .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .stars .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-4, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-4, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-4, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .commentlist li .comment-text .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-rating .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .stars .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-5, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-5, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-5, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating .commentlist li .comment-text .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-rating .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .stars .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-1, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-1, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-1, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .commentlist li .comment-text .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-comment .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .stars .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-2, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-2, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-2, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .commentlist li .comment-text .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-comment .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .stars .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-3, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-3, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-3, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .commentlist li .comment-text .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-comment .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .stars .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-4, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-4, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-4, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .commentlist li .comment-text .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-comment .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .stars .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-5, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-5, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-5, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment .commentlist li .comment-text .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .comment-form-comment .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .stars .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-1, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-1, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-1, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .commentlist li .comment-text .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .upload_section .star-rating .star-1, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .stars .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-2, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-2, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-2, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .commentlist li .comment-text .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .upload_section .star-rating .star-2, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .stars .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-3, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-3, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-3, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .commentlist li .comment-text .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .upload_section .star-rating .star-3, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .stars .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-4, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-4, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-4, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .commentlist li .comment-text .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .upload_section .star-rating .star-4, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .stars .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .products--top-rated .product-item .woocommerce-loop-product__link .star-rating .star-5, .products--top-rated .product-item .woocommerce-loop-product__link .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .star-rating .star-5, .single-product .single-product-content-area .upsell .product-item .woocommerce-loop-product__link .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .single-product-content-area .summary .woocommerce-product-rating .star-rating .star-5, .single-product .single-product-content-area .summary .woocommerce-product-rating .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section .commentlist li .comment-text .star-rating .star-5, .single-product .yith-woocommerce-advanced-reviews .commentlist li .comment-text .comment-respond .comment-form .upload_section .star-rating .star-5 {
+      color: #e44444;
+      margin-right: 5px; }
+  .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title input[type=text], .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating input[type=text], .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment input[type=text], .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section input[type=text] {
+    width: 100%; }
+  .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-title textarea, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-rating textarea, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .comment-form-comment textarea, .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .upload_section textarea {
+    width: 100%; }
+  .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .form-submit .submit {
+    background-color: #e44444 !important;
+    padding: 10px 15px !important;
+    color: #fff !important;
+    font-size: 12px !important;
+    border: 1px solid #e44444 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    font-weight: 500 !important; }
+    .single-product .yith-woocommerce-advanced-reviews .comment-respond .comment-form .form-submit .submit:hover {
+      background-color: #fff !important;
+      color: #e44444 !important; }
 
 /*# sourceMappingURL=screen.css.map */

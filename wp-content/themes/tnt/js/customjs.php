@@ -44,7 +44,6 @@
             var reviews_summary = $('#reviews_summary');
             $('#reviews_summary').remove();
             $('.single-product-content-area .product-gallery').append(reviews_summary);
-
         <?php } ?>
 	});
 </script>

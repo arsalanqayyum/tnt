@@ -98,8 +98,35 @@
 </div>
 
 <?php
-wp_footer();
-require_once 'js/customjs.php';
+    if ( !is_user_logged_in() ) {
+        ?>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Please Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <?php wp_login_form(); ?>
+                        <!--<form accept-charset="">
+                            <label>Email Address or Username</label>
+                            <input type="text" placeholder="email or username">
+                            <label>Password</label>
+                            <input type="password">
+                            <button type="submit">PROCEED</button>
+                        </form>-->
+                        <a href="<?php echo home_url('my-account'); ?>">New to tnt? signup now</a>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <?php }
+    wp_footer();
+    require_once 'js/customjs.php';
 ?>
 </body>
 </html>

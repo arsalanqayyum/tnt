@@ -20,9 +20,14 @@
             </div>
             <div class="col-lg-6 col-sm-6 col-xs-12">
                 <ul class="list-inline right">
-                    <li><a href="#"><i class="fa fa-user"></i> sign in </a></li>
-                    <li><a href="#"><span><i class="fa fa-heart"></i></span> wish list</a></li>
-                    <li><a href="#"><i class="fa fa-shopping-cart"></i> cart <span class="badge">0</span></a></li>
+                    <?php if ( is_user_logged_in() ){ ?>
+                        <li><a href="<?php echo wp_logout_url( home_url() ); ?>"><i class="fa fa-user"></i> logout </a></li>
+                    <?php } else{ ?>
+                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal"><i class="fa fa-user"></i> sign in </a></li>
+                    <?php } ?>
+
+                    <li><a href="<?php echo home_url('wishlist'); ?>"><span><i class="fa fa-heart"></i></span> wish list</a></li>
+                    <li><a href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><i class="fa fa-shopping-cart"></i> cart <span class="badge"><?php echo WC()->cart->get_cart_contents_count(); ?></span></a></li>
                 </ul>
             </div>
         </div>
