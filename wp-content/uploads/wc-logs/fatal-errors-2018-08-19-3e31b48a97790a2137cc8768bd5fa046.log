@@ -1,0 +1,8 @@
+2018-08-19T13:46:52+00:00 CRITICAL Maximum execution time of 30 seconds exceeded
+
+2018-08-19T13:50:21+00:00 CRITICAL Call to undefined function twentyseventeen_get_svg()
+
+2018-08-19T14:23:35+00:00 CRITICAL Call to undefined function twentyseventeen_get_svg()
+
+2018-08-19T14:57:31+00:00 CRITICAL Call to undefined function get_field()
+

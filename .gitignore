@@ -11,8 +11,9 @@ wp-*.php
 /.idea
 .htaccess
 /.git
-/wp-content/uploads
-/wp-content/plugins
+#/wp-content/uploads
+#/wp-content/plugins
+/wp-content/upgrade
 vcs.xml
 xmlrpc.php
 license.txt

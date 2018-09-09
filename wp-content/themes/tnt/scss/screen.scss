@@ -154,6 +154,10 @@ a{
         -webkit-border-radius: 0 !important;
         -moz-border-radius: 0 !important;
         border-radius: 0 !important;
+        a{
+          @extend %calibri;
+          text-transform: uppercase;
+        }
       }
       .panel{
         padding: 0 30px 30px !important;
@@ -185,21 +189,43 @@ a{
       }
     }
     .product-gallery{
-      top: 0;
+      top: -15px;
       position: relative;
-      .flex-control-nav{
-        margin-top: 15px !important;
+      .flex-viewport{
+        .woocommerce-product-gallery__wrapper{
+          height: auto;
+          .woocommerce-product-gallery__image{
+            display: inline-block;
+            a{
+              display: inline-block;
+              img{
+                padding: 0;
+                border: none;
+                /*opacity: 1 !important;
+                display: block;
+                padding: 4px;
+                margin-bottom: 20px;
+                line-height: 1.42857143;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                -webkit-transition: border .2s ease-in-out;
+                -o-transition: border .2s ease-in-out;
+                transition: border .2s ease-in-out;*/
+              }
+            }
+          }
+        }
+      }
+      .flex-control-thumbs{
+        margin: 15px 0 0;
         li{
           padding-right: 5px;
           padding-left: 5px;
           img{
-            opacity: 1 !important;
-            display: block;
             padding: 4px;
-            margin-bottom: 20px;
-            line-height: 1.42857143;
-            background-color: #fff;
-            border: 1px solid #ddd;
+            background-color: $white;
+            border: 1px solid $gray2;
             border-radius: 4px;
             -webkit-transition: border .2s ease-in-out;
             -o-transition: border .2s ease-in-out;
@@ -524,4 +550,26 @@ a{
     }
   }
 }
-
+.category-details{
+  .banner{
+    .gallery{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  .woocommerce-breadcrumb{
+    @extend %calibri;
+    font-size: 16px;
+    text-transform: uppercase;
+    float: right;
+    line-height: 2;
+    color: $gray3;
+    a{
+      color: $gray2;
+      &:hover{
+        color: $gray3;
+      }
+    }
+  }
+}

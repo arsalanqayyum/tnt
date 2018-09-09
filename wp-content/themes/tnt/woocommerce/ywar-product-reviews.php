@@ -20,7 +20,6 @@ $reviews_count = count( $YWAR_AdvancedReview->get_product_reviews_by_rating( $pr
 ?>
 
 <?php do_action( 'yith_advanced_reviews_before_reviews' ); ?>
-<hr>
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
