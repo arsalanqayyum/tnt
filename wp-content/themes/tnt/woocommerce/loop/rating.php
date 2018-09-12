@@ -26,4 +26,11 @@ if ( get_option( 'woocommerce_enable_review_rating' ) === 'no' ) {
 	return;
 }
 
-echo wc_get_rating_html( $product->get_average_rating() );
+$rating_html = wc_get_rating_html( $product->get_average_rating() );
+if(!empty($rating_html)){
+    echo $rating_html;
+} else{
+    ?>
+    <div class="star-rating"><span>&nbsp;</span></div>
+    <?php
+}

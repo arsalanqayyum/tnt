@@ -44,6 +44,14 @@
             var reviews_summary = $('#reviews_summary');
             $('#reviews_summary').remove();
             $('.single-product-content-area .product-gallery').append(reviews_summary);
+        <?php } if(is_archive()){ ?>
+            setInterval(function(){
+                $('.products--top-rated li.product').removeAttr('class').addClass('product-item col-lg-3 col-md-6 col-sm-12');
+            }, 1000);
+            var sidebar = $('.woof.woof_sid').clone();
+            $('.woof.woof_sid').remove();
+            $('#filters').append(sidebar);
+            $('.button.woof_reset_search_form').click();
         <?php } ?>
 	});
 </script>

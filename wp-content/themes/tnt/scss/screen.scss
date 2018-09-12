@@ -511,15 +511,7 @@ a{
             font-weight: bold;
             font-size: 14px;
           }
-          .stars{
-            text-align: left;
-            display: inline-block;
-            margin-bottom: 0 !important;
-            .star-1, .star-2, .star-3, .star-4, .star-5{
-              color: $red;
-              margin-right: 5px;
-            }
-          }
+
           input{
             &[type=text]{
               width: 100%;
@@ -527,6 +519,15 @@ a{
           }
           textarea{
             width: 100%;
+          }
+        }
+        .stars{
+          text-align: left !important;
+          display: inline-block;
+          margin-bottom: 0 !important;
+          .star-1, .star-2, .star-3, .star-4, .star-5{
+            color: $red;
+            margin-right: 5px;
           }
         }
         .form-submit{
@@ -545,6 +546,50 @@ a{
               color: $red !important;
             }
           }
+        }
+      }
+    }
+  }
+}
+.woof_sid_auto_shortcode{
+  border: none;
+  .button{
+    background-color: $red !important;
+    padding: 10px 15px !important;
+    color: $white !important;
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    border: 1px solid $red !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    font-weight: 500 !important;
+    &:hover{
+      background-color: $white !important;
+      color: $red !important;
+    }
+  }
+  .woof_edit_view{
+    display: none;
+  }
+  .woof_redraw_zone{
+    .woof_container{
+      display: block;
+      border-bottom: 1px solid $gray2;
+      padding: 25px 0;
+      width: 100%;
+      .widget_price_filter{
+        .price_slider{
+          background-color: $gray2 !important;
+          .ui-corner-all{
+            background-color: $red !important;
+            border-color: $white;
+          }
+        }
+        .price_label{
+          @extend %calibri;
+          font-size: 16px;
+          font-weight: bold;
         }
       }
     }
@@ -569,6 +614,27 @@ a{
       color: $gray2;
       &:hover{
         color: $gray3;
+      }
+    }
+  }
+  .woocommerce-ordering{
+    select{
+      padding: 5px;
+      border: 1px solid $gray2;
+      color: $primary-color;
+      font-size: 16px;
+      @extend %calibri;
+    }
+  }
+  .woof_products_top_panel{
+    border-bottom: 1px solid $gray2;
+    padding-bottom: 15px;
+    li{
+      padding: 7px 15px;
+      border: 1px solid $gray2;
+      @extend %calibri;
+      span{
+        padding-right: 30px;
       }
     }
   }
