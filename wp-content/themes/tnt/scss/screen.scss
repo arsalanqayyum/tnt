@@ -80,6 +80,14 @@ a{
     display: none;
   }
 }
+table{
+  tr{
+    td, th{
+      @extend %calibri;
+      font-size: 16px;
+    }
+  }
+}
 .modal{
   .modal-header{
     .modal-title{
@@ -389,6 +397,13 @@ a{
         .feedback{
           display: none;
         }
+        .yith-wcwl-wishlistexistsbrowse{
+          &.show{
+            a{
+              @extend .default-btn;
+            }
+          }
+        }
       }
 
     }
@@ -635,6 +650,82 @@ a{
       @extend %calibri;
       span{
         padding-right: 30px;
+      }
+    }
+  }
+}
+.cart_totals {
+  table{
+    tr{
+      th, td{
+        text-transform: capitalize;
+        font-weight: normal;
+        .button, .shipping-calculator-button{
+          @extend .default-btn;
+        }
+      }
+      &.order-total{
+        th, td{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .wc-proceed-to-checkout{
+    a{
+      &.default-btn{
+        padding: 10px 15px;
+        font-weight: bold;
+        font-size: 14px;
+        .fa{
+          display: inline-block;
+          margin-right: 10px;
+          font-size: 14px;
+          margin-top: 0;
+        }
+      }
+      &.checkout-button{
+        @extend .default-btn;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 13px;
+      }
+    }
+  }
+}
+.woocommerce-cart-form{
+  table{
+    display: table;
+    tbody{
+      tr{
+        td{
+          border: none;
+          padding: 8px;
+          &.product-thumbnail{
+            img{
+              width: 150px;
+              height: auto;
+            }
+          }
+          &.product-remove{
+            a{
+              &:hover{
+                background-color: transparent;
+                .fa{
+                  background-color: transparent;
+                  color: $primary-color;
+                }
+              }
+            }
+          }
+          .star-rating{
+            float: left;
+            width: 100%;
+            &:before{
+              color: $red;
+            }
+          }
+        }
       }
     }
   }

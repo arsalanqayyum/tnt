@@ -410,7 +410,7 @@ h1 span {
   text-align: center; }
 
 .cart a, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist a {
-  background-color: #e44444;
+  /*background-color: #e44444;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -419,14 +419,14 @@ h1 span {
   text-transform: uppercase;
   font-family: calibri;
   font-size: 12px;
-  border: 1px solid #e44444; }
+  border:1px solid #e44444;*/ }
 
 .cart a:hover, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist a:hover {
-  background-color: transparent;
+  /*background-color: transparent;
   color: #e44444;
   border: 1px solid #e44444;
   text-decoration: none;
-  transition: ease-in 0.2s; }
+  transition: ease-in 0.2s;*/ }
 
 hr {
   border-top: 1px solid #dadada !important; }
@@ -743,9 +743,6 @@ footer input {
 .btn.active span.glyphicon {
   opacity: 1; }
 
-.single ul li input[type="checkbox"] {
-  display: none; }
-
 label.btn {
   padding: 3px 4px !important;
   background-color: #eeeeee;
@@ -825,7 +822,6 @@ label.btn:hover {
 
 .single input[type=number]::-webkit-inner-spin-button,
 .single input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
   margin: 0; }
 
 .related, .single-product .single-product-content-area .woocommerce-tabs .panel h2, .single-product .single-product-content-area .product-gallery #reviews_summary h3 {
@@ -1250,8 +1246,9 @@ label.btn:hover {
 
 .checkout a {
   background-color: #e44444;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid transparent;
   display: block;
   text-align: center;
   color: #fff;
@@ -1376,7 +1373,7 @@ label.btn:hover {
 a:hover, a:focus, a:active {
   text-decoration: none !important; }
 
-.btn-cart, .default-btn, .modal .modal-body .login-submit .button, .products--top-rated .product-item .button, .single-product .single-product-content-area .upsell .product-item .button, .products--top-rated .product-item .added_to_cart, .single-product .single-product-content-area .upsell .product-item .added_to_cart, .single-product .single-product-content-area .summary .cart .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist, .single-product .single-product-content-area .woocommerce-tabs li a, .single-product .single-product-content-area .product-gallery #reviews_summary *, .single-product .single-product-content-area .product-gallery #reviews_summary .reviews_bar .ywar_perc_rating span, .single-product .single-product-content-area .summary .stock-status, .single-product .single-product-content-area .summary .cart.variations_form .variations tr .label, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .label, .single-product .single-product-content-area .summary .sku_wrapper, .single-product .single-product-content-area .summary .posted_in, .single-product .single-product-content-area .summary .tagged_as, .single-product .single-product-content-area .summary .woocommerce-product-details__short-description, .single-product .single-product-content-area .related-product-container p.related, .single-product .single-product-content-area .related-product-container .related-product-item .related-detail .head, .single-product .single-product-content-area .related-product-container .related-product-item .related-detail .text, .single-product .single-product-content-area .related-product-container .related-product-item .related-detail .summary .woocommerce-product-details__short-description, .single-product .single-product-content-area .summary .related-product-container .related-product-item .related-detail .woocommerce-product-details__short-description, .single-product .yith-woocommerce-advanced-reviews .commentlist li, .woof_sid_auto_shortcode .woof_redraw_zone .woof_container .widget_price_filter .price_label, .category-details .woocommerce-breadcrumb, .category-details .woocommerce-ordering select, .category-details .woof_products_top_panel li {
+.btn-cart, .default-btn, .modal .modal-body .login-submit .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse.show a, .cart_totals table tr th .button, .cart_totals table tr th .shipping-calculator-button, .cart_totals table tr td .button, .cart_totals table tr td .shipping-calculator-button, .cart_totals .wc-proceed-to-checkout a.checkout-button, .products--top-rated .product-item .button, .single-product .single-product-content-area .upsell .product-item .button, .products--top-rated .product-item .added_to_cart, .single-product .single-product-content-area .upsell .product-item .added_to_cart, .single-product .single-product-content-area .summary .cart .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist, table tr td, table tr th, .single-product .single-product-content-area .woocommerce-tabs li a, .single-product .single-product-content-area .product-gallery #reviews_summary *, .single-product .single-product-content-area .product-gallery #reviews_summary .reviews_bar .ywar_perc_rating span, .single-product .single-product-content-area .summary .stock-status, .single-product .single-product-content-area .summary .cart.variations_form .variations tr .label, .single-product .single-product-content-area .summary .variations_form.yith-wcwl-add-to-wishlist .variations tr .label, .single-product .single-product-content-area .summary .sku_wrapper, .single-product .single-product-content-area .summary .posted_in, .single-product .single-product-content-area .summary .tagged_as, .single-product .single-product-content-area .summary .woocommerce-product-details__short-description, .single-product .single-product-content-area .related-product-container p.related, .single-product .single-product-content-area .related-product-container .related-product-item .related-detail .head, .single-product .single-product-content-area .related-product-container .related-product-item .related-detail .text, .single-product .single-product-content-area .related-product-container .related-product-item .related-detail .summary .woocommerce-product-details__short-description, .single-product .single-product-content-area .summary .related-product-container .related-product-item .related-detail .woocommerce-product-details__short-description, .single-product .yith-woocommerce-advanced-reviews .commentlist li, .woof_sid_auto_shortcode .woof_redraw_zone .woof_container .widget_price_filter .price_label, .category-details .woocommerce-breadcrumb, .category-details .woocommerce-ordering select, .category-details .woof_products_top_panel li {
   font-family: Calibri; }
 
 .single-product .yith-woocommerce-advanced-reviews h1:after {
@@ -1387,7 +1384,7 @@ a:hover, a:focus, a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.btn-cart, .default-btn, .modal .modal-body .login-submit .button, .products--top-rated .product-item .button, .single-product .single-product-content-area .upsell .product-item .button, .products--top-rated .product-item .added_to_cart, .single-product .single-product-content-area .upsell .product-item .added_to_cart, .single-product .single-product-content-area .summary .cart .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist {
+.btn-cart, .default-btn, .modal .modal-body .login-submit .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse.show a, .cart_totals table tr th .button, .cart_totals table tr th .shipping-calculator-button, .cart_totals table tr td .button, .cart_totals table tr td .shipping-calculator-button, .cart_totals .wc-proceed-to-checkout a.checkout-button, .products--top-rated .product-item .button, .single-product .single-product-content-area .upsell .product-item .button, .products--top-rated .product-item .added_to_cart, .single-product .single-product-content-area .upsell .product-item .added_to_cart, .single-product .single-product-content-area .summary .cart .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist {
   background-color: #e44444;
   padding: 10px 15px;
   color: #fff;
@@ -1398,7 +1395,7 @@ a:hover, a:focus, a:active {
   -moz-border-radius: 0;
   border-radius: 0;
   font-weight: 500; }
-  .btn-cart:before, .default-btn:before, .modal .modal-body .login-submit .button:before, .products--top-rated .product-item .button:before, .single-product .single-product-content-area .upsell .product-item .button:before, .products--top-rated .product-item .added_to_cart:before, .single-product .single-product-content-area .upsell .product-item .added_to_cart:before, .single-product .single-product-content-area .summary .cart .button:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:before {
+  .btn-cart:before, .default-btn:before, .modal .modal-body .login-submit .button:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse.show a:before, .cart_totals table tr th .button:before, .cart_totals table tr th .shipping-calculator-button:before, .cart_totals table tr td .button:before, .cart_totals table tr td .shipping-calculator-button:before, .cart_totals .wc-proceed-to-checkout a.checkout-button:before, .products--top-rated .product-item .button:before, .single-product .single-product-content-area .upsell .product-item .button:before, .products--top-rated .product-item .added_to_cart:before, .single-product .single-product-content-area .upsell .product-item .added_to_cart:before, .single-product .single-product-content-area .summary .cart .button:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:before {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
@@ -1407,7 +1404,7 @@ a:hover, a:focus, a:active {
     -moz-osx-font-smoothing: grayscale;
     content: "\f217";
     margin-right: 5px; }
-  .btn-cart:hover, .default-btn:hover, .modal .modal-body .login-submit .button:hover, .products--top-rated .product-item .button:hover, .single-product .single-product-content-area .upsell .product-item .button:hover, .products--top-rated .product-item .added_to_cart:hover, .single-product .single-product-content-area .upsell .product-item .added_to_cart:hover, .single-product .single-product-content-area .summary .cart .button:hover, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button:hover, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:hover {
+  .btn-cart:hover, .default-btn:hover, .modal .modal-body .login-submit .button:hover, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse.show a:hover, .cart_totals table tr th .button:hover, .cart_totals table tr th .shipping-calculator-button:hover, .cart_totals table tr td .button:hover, .cart_totals table tr td .shipping-calculator-button:hover, .cart_totals .wc-proceed-to-checkout a.checkout-button:hover, .products--top-rated .product-item .button:hover, .single-product .single-product-content-area .upsell .product-item .button:hover, .products--top-rated .product-item .added_to_cart:hover, .single-product .single-product-content-area .upsell .product-item .added_to_cart:hover, .single-product .single-product-content-area .summary .cart .button:hover, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .button:hover, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:hover {
     background-color: transparent;
     color: #e44444;
     border: 1px solid #e44444;
@@ -1431,8 +1428,11 @@ a:hover, a:focus, a:active {
 .owl-carousel .onsale {
   left: 15px !important; }
 
-.default-btn:before, .modal .modal-body .login-submit .button:before, .modal .modal-body .login-submit .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .modal .modal-body .login-submit .add_to_wishlist:before {
+.default-btn:before, .modal .modal-body .login-submit .button:before, .modal .modal-body .login-submit .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .modal .modal-body .login-submit .add_to_wishlist:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse.show a:before, .cart_totals table tr th .button:before, .cart_totals table tr th .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .cart_totals table tr th .add_to_wishlist:before, .cart_totals table tr th .shipping-calculator-button:before, .cart_totals table tr td .button:before, .cart_totals table tr td .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .add_to_wishlist:before, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .cart_totals table tr td .add_to_wishlist:before, .cart_totals table tr td .shipping-calculator-button:before, .cart_totals .wc-proceed-to-checkout a.checkout-button:before {
   display: none; }
+
+table tr td, table tr th {
+  font-size: 16px; }
 
 .modal .modal-header .modal-title {
   font-size: 18px;
@@ -1789,5 +1789,43 @@ a:hover, a:focus, a:active {
     border: 1px solid #dadada; }
     .category-details .woof_products_top_panel li span {
       padding-right: 30px; }
+
+.cart_totals table tr th, .cart_totals table tr td {
+  text-transform: capitalize;
+  font-weight: normal; }
+.cart_totals table tr.order-total th, .cart_totals table tr.order-total td {
+  font-weight: bold; }
+.cart_totals .wc-proceed-to-checkout a.default-btn, .cart_totals .wc-proceed-to-checkout .modal .modal-body .login-submit a.button, .modal .modal-body .login-submit .cart_totals .wc-proceed-to-checkout a.button, .cart_totals .wc-proceed-to-checkout .modal .modal-body .login-submit .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist a.add_to_wishlist, .modal .modal-body .login-submit .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .cart_totals .wc-proceed-to-checkout a.add_to_wishlist, .cart_totals .wc-proceed-to-checkout .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .modal .modal-body .login-submit a.add_to_wishlist, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .modal .modal-body .login-submit .cart_totals .wc-proceed-to-checkout a.add_to_wishlist, .cart_totals .wc-proceed-to-checkout .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse.show a, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse.show .cart_totals .wc-proceed-to-checkout a, .cart_totals .wc-proceed-to-checkout table tr th a.button, .cart_totals table tr th .wc-proceed-to-checkout a.button, .cart_totals .wc-proceed-to-checkout table tr th .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist a.add_to_wishlist, .cart_totals table tr th .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .wc-proceed-to-checkout a.add_to_wishlist, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .cart_totals .wc-proceed-to-checkout table tr th a.add_to_wishlist, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .cart_totals table tr th .wc-proceed-to-checkout a.add_to_wishlist, .cart_totals .wc-proceed-to-checkout table tr th a.shipping-calculator-button, .cart_totals table tr th .wc-proceed-to-checkout a.shipping-calculator-button, .cart_totals .wc-proceed-to-checkout table tr td a.button, .cart_totals table tr td .wc-proceed-to-checkout a.button, .cart_totals .wc-proceed-to-checkout table tr td .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist a.add_to_wishlist, .cart_totals table tr td .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .wc-proceed-to-checkout a.add_to_wishlist, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .cart_totals .wc-proceed-to-checkout table tr td a.add_to_wishlist, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .cart_totals table tr td .wc-proceed-to-checkout a.add_to_wishlist, .cart_totals .wc-proceed-to-checkout table tr td a.shipping-calculator-button, .cart_totals table tr td .wc-proceed-to-checkout a.shipping-calculator-button, .cart_totals .wc-proceed-to-checkout a.checkout-button {
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 14px; }
+  .cart_totals .wc-proceed-to-checkout a.default-btn .fa, .cart_totals .wc-proceed-to-checkout .modal .modal-body .login-submit a.button .fa, .modal .modal-body .login-submit .cart_totals .wc-proceed-to-checkout a.button .fa, .cart_totals .wc-proceed-to-checkout .modal .modal-body .login-submit .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist a.add_to_wishlist .fa, .modal .modal-body .login-submit .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .cart_totals .wc-proceed-to-checkout a.add_to_wishlist .fa, .cart_totals .wc-proceed-to-checkout .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .modal .modal-body .login-submit a.add_to_wishlist .fa, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .modal .modal-body .login-submit .cart_totals .wc-proceed-to-checkout a.add_to_wishlist .fa, .cart_totals .wc-proceed-to-checkout .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse.show a .fa, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse.show .cart_totals .wc-proceed-to-checkout a .fa, .cart_totals .wc-proceed-to-checkout table tr th a.button .fa, .cart_totals table tr th .wc-proceed-to-checkout a.button .fa, .cart_totals .wc-proceed-to-checkout table tr th .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist a.add_to_wishlist .fa, .cart_totals table tr th .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .wc-proceed-to-checkout a.add_to_wishlist .fa, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .cart_totals .wc-proceed-to-checkout table tr th a.add_to_wishlist .fa, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .cart_totals table tr th .wc-proceed-to-checkout a.add_to_wishlist .fa, .cart_totals .wc-proceed-to-checkout table tr th a.shipping-calculator-button .fa, .cart_totals table tr th .wc-proceed-to-checkout a.shipping-calculator-button .fa, .cart_totals .wc-proceed-to-checkout table tr td a.button .fa, .cart_totals table tr td .wc-proceed-to-checkout a.button .fa, .cart_totals .wc-proceed-to-checkout table tr td .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist a.add_to_wishlist .fa, .cart_totals table tr td .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .wc-proceed-to-checkout a.add_to_wishlist .fa, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .cart_totals .wc-proceed-to-checkout table tr td a.add_to_wishlist .fa, .single-product .single-product-content-area .summary .yith-wcwl-add-to-wishlist .cart_totals table tr td .wc-proceed-to-checkout a.add_to_wishlist .fa, .cart_totals .wc-proceed-to-checkout table tr td a.shipping-calculator-button .fa, .cart_totals table tr td .wc-proceed-to-checkout a.shipping-calculator-button .fa, .cart_totals .wc-proceed-to-checkout a.checkout-button .fa {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    margin-top: 0; }
+.cart_totals .wc-proceed-to-checkout a.checkout-button {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 13px; }
+
+.woocommerce-cart-form table {
+  display: table; }
+  .woocommerce-cart-form table tbody tr td {
+    border: none;
+    padding: 8px; }
+    .woocommerce-cart-form table tbody tr td.product-thumbnail img {
+      width: 150px;
+      height: auto; }
+    .woocommerce-cart-form table tbody tr td.product-remove a:hover {
+      background-color: transparent; }
+      .woocommerce-cart-form table tbody tr td.product-remove a:hover .fa {
+        background-color: transparent;
+        color: #333; }
+    .woocommerce-cart-form table tbody tr td .star-rating {
+      float: left;
+      width: 100%; }
+      .woocommerce-cart-form table tbody tr td .star-rating:before {
+        color: #e44444; }
 
 /*# sourceMappingURL=screen.css.map */

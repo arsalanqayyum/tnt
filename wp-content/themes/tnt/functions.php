@@ -606,3 +606,6 @@ add_action('woocommerce_single_product_summary', function() {
 	$stock_status = ($stock_status == 'outofstock') ? 'Out of Stock' : 'In Stock';
 	?><div class="stock-status">Availablilty: <span><?php echo $stock_status; ?></span></div><?php
 }, 10);
+
+
+remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display');
