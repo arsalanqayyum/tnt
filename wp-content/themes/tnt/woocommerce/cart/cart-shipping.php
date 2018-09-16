@@ -47,9 +47,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php elseif ( WC()->customer->has_calculated_shipping() ) : ?>
 			<?php
 				if ( is_cart() ) {
-					echo apply_filters( 'woocommerce_cart_no_shipping_available_html', wpautop( __( 'There are no shipping methods available. Please ensure that your address has been entered correctly, or contact us if you need any help.', 'woocommerce' ) ) );
+					echo apply_filters( 'woocommerce_cart_no_shipping_available_html', wpautop( __( 'Shipping charges may apply', 'woocommerce' ) ) );
 				} else {
-					echo apply_filters( 'woocommerce_no_shipping_available_html', wpautop( __( 'There are no shipping methods available. Please ensure that your address has been entered correctly, or contact us if you need any help.', 'woocommerce' ) ) );
+					echo apply_filters( 'woocommerce_no_shipping_available_html', wpautop( __( 'Shipping charges may apply', 'woocommerce' ) ) );
 				}
 			?>
 		<?php elseif ( ! is_cart() ) : ?>

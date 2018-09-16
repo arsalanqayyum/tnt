@@ -21,8 +21,13 @@ get_header( 'shop' );
 
 global $wp_query;
 $cat = $wp_query->get_queried_object();
-$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
-$image = wp_get_attachment_url( $thumbnail_id );
+if(isset($cat->term_id)){
+	$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+	$image = wp_get_attachment_url( $thumbnail_id );
+} else{
+	$image = '';
+}
+
 ?>
 
     <div class="container-fluid">
