@@ -694,7 +694,7 @@ table{
     }
   }
 }
-.woocommerce-cart-form{
+.woocommerce-cart-form, #yith-wcwl-form{
   table{
     display: table;
     tbody{
@@ -724,13 +724,16 @@ table{
               color: $primary-color;
               font-size: 20px;
               font-weight: normal;
+              display: block;
+              text-align: left;
             }
 
             .star-rating{
-              float: left;
-              width: 100%;
+              float: none;
               margin-bottom: 10px;
               font-size: 22px;
+              font-family: star !important;
+              margin-left: 0;
               &:before{
                 color: $red;
               }

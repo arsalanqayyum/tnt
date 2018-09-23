@@ -149,7 +149,7 @@ if ( ! defined( 'YITH_WCWL' ) ) {
 							<?php if( $is_user_owner ): ?>
                                 <td class="product-remove">
                                     <div>
-                                        <a href="<?php echo esc_url( add_query_arg( 'remove_from_wishlist', $item['prod_id'] ) ) ?>" class="remove remove_from_wishlist" title="<?php _e( 'Remove this product', 'yith-woocommerce-wishlist' ) ?>">&times;</a>
+                                        <a href="<?php echo esc_url( add_query_arg( 'remove_from_wishlist', $item['prod_id'] ) ) ?>" class="remove_from_wishlist remove" title="<?php _e( 'Remove this product', 'yith-woocommerce-wishlist' ) ?>"><i class="fa fa-trash-o"></i></a>
                                     </div>
                                 </td>
 							<?php endif; ?>
@@ -161,7 +161,7 @@ if ( ! defined( 'YITH_WCWL' ) ) {
                             </td>
 
                             <td class="product-name">
-                                <a href="<?php echo esc_url( get_permalink( apply_filters( 'woocommerce_in_cart_product', $item['prod_id'] ) ) ) ?>"><?php echo apply_filters( 'woocommerce_in_cartproduct_obj_title', $product->get_title(), $product ) ?></a>
+                                <a class="title" href="<?php echo esc_url( get_permalink( apply_filters( 'woocommerce_in_cart_product', $item['prod_id'] ) ) ) ?>"><?php echo apply_filters( 'woocommerce_in_cartproduct_obj_title', $product->get_title(), $product ) ?></a>
 								<?php do_action( 'yith_wcwl_table_after_product_name', $item ); ?>
                             </td>
 

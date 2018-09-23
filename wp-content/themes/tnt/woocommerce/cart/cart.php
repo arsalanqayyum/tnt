@@ -73,8 +73,8 @@ do_action( 'woocommerce_before_cart' ); ?>
                                 do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
 
 
-                                $average = $_product->get_average_rating();
-                                echo '<div class="star-rating stars" title="'.sprintf(__( 'Rated %s out of 5', 'woocommerce' ), $average).'"><span style="width:'.( ( $average / 5 ) * 100 ) . '%"><strong itemprop="ratingValue" class="rating">'.$average.'</strong> '.__( 'out of 5', 'woocommerce' ).'</span></div>';
+                                $average = (float)$_product->get_average_rating();
+                                echo '<div class="star-rating stars" title="'.sprintf(__( 'Rated %s out of 5', 'woocommerce' ), $average).'"><span style="width:'.( ( $average * 100 ) / 5 ) . '%"><strong itemprop="ratingValue" class="rating">'.$average.'</strong> '.__( 'out of 5', 'woocommerce' ).'</span></div>';
 
 
                                 // Meta data.

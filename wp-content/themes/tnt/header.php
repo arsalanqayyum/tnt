@@ -108,6 +108,7 @@
             <li><a href="#">collection</a></li>
             <li><a href="#">sale</a></li>
         </ul>
+
         <ul class="nav navbar-nav navbar-right">
             <li>
                 <div class="nav-magnifier"><i class="fa fa-search"></i> </div>
@@ -118,7 +119,7 @@
         </ul>
     </div>
 </nav>
-
+<?php wp_megamenu(array('theme_location' => 'top')); ?>
 <div class="mynav" data-spy="affix" data-offset="500">
     <div class="container">
         <div class="row">

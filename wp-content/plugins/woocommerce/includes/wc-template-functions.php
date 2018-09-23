@@ -3162,7 +3162,6 @@ function wc_get_rating_html( $rating, $count = 0 ) {
 	} else {
 		$html = '';
 	}
-
 	return apply_filters( 'woocommerce_product_get_rating_html', $html, $rating, $count );
 }
 
