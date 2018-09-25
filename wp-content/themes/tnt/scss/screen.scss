@@ -850,3 +850,109 @@ table{
     }
   }
 }
+header{
+  &.main-menu{
+    //box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.47);
+    #wp-megamenu-top {
+      padding: 5px 0 15px;
+      display: inline-block;
+      background-color: $white;
+      width: 100%;
+      #wp-megamenu-item-wpmm-search-icon{
+        display: none !important;
+      }
+      &>.wpmm-nav-wrap {
+        position: relative;
+        ul{
+          &.wp-megamenu{
+            &>li{
+              a{
+                color: $primary-color;
+                font-family: cambria;
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                line-height: 50px;
+                padding-left: 35px;
+                .fa{
+                  color: $primary-color;
+                  font-weight: bold;
+                  &:hover{
+                    color: $red;
+                  }
+                }
+                &:hover{
+                  color: $red;
+                }
+              }
+              ul{
+                &.wp-megamenu-sub-menu{
+                  li{
+                    margin-bottom: 0;
+                    a{
+                      text-transform: capitalize;
+                      font-weight: normal;
+                      padding-left: 0;
+                      &:hover{
+                        color: $primary-color;
+                        background-color: $white2;
+                      }
+                    }
+                  }
+                }
+              }
+
+            }
+            li{
+              .wpmm-type-widget{
+                .wpmm-item-title{
+                  font-size: 16px;
+                  font-weight: bold;
+                  padding-bottom: 15px;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+        .wpmm-search-form{
+          display: block;
+          top: 18%;
+          right: 0;
+          input{
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-left: 10px;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            border: 1px solid $gray3;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page--search{
+  input[type="search"]{
+    height: 40px;
+    border: 1px solid $gray2;
+    width: 240px;
+    padding: 0 15px;
+  }
+  button{
+    @extend .default-btn;
+  }
+  h2{
+    a{
+      color: $red;
+      font-size: 20px;
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+}

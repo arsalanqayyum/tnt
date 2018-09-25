@@ -34,10 +34,10 @@
     </div>
 </div>
 
-<nav class="navbar navbar-inverse" data-spy="affix" data-offset="500">
+<!--<nav class="navbar navbar-inverse" data-spy="affix" data-offset="500">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="logo img-responsive"></a>
+            <a class="navbar-brand" href="<?php /*echo home_url(); */?>"><img src="<?php /*echo get_template_directory_uri(); */?>/images/logo.png" class="logo img-responsive"></a>
         </div>
         <ul class="nav navbar-nav">
             <li class="dropdown">
@@ -46,7 +46,7 @@
                 <div class="mega-drop-down-menu">
                     <div class="container">
                         <ul class="dropdown-menu col-sm-4">
-                            <li><img src="<?php echo get_template_directory_uri(); ?>/images/img15.jpg" class="img-responsive"> </li>
+                            <li><img src="<?php /*echo get_template_directory_uri(); */?>/images/img15.jpg" class="img-responsive"> </li>
                         </ul>
 
                         <ul class="dropdown-menu col-sm-3">
@@ -74,7 +74,7 @@
                 <div class="mega-drop-down-menu">
                     <div class="container">
                         <ul class="dropdown-menu col-sm-4">
-                            <li><img src="<?php echo get_template_directory_uri(); ?>/images/img14.jpg" class="img-responsive"> </li>
+                            <li><img src="<?php /*echo get_template_directory_uri(); */?>/images/img14.jpg" class="img-responsive"> </li>
                         </ul>
 
                         <ul class="dropdown-menu col-sm-3">
@@ -118,8 +118,20 @@
             </li>
         </ul>
     </div>
-</nav>
-<?php wp_megamenu(array('theme_location' => 'top')); ?>
+</nav>-->
+
+<header class="main-menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <?php wp_megamenu(array('theme_location' => 'top')); ?>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
 <div class="mynav" data-spy="affix" data-offset="500">
     <div class="container">
         <div class="row">
