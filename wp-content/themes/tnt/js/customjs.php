@@ -49,9 +49,40 @@
                 $('.products--top-rated li.product').removeAttr('class').addClass('product-item col-lg-3 col-md-6 col-sm-12');
             }, 1000);
             var sidebar = $('.woof.woof_sid').clone();
-            $('.woof.woof_sid').remove();
+            $('.woof.woof_sid').hide();
             $('#filters').append(sidebar);
             $('.button.woof_reset_search_form').click();
         <?php } ?>
+
+        $.each($('.products--top-rated .products .product-item .woocommerce-loop-product__title'),function () {
+            $(this).before(`<div class="overlay">
+                <ul class="list-inline" style="text-align: right;">
+                    <li style="display: none;"><a href="" class="product--view-link"><i class="glyphicon glyphicon-eye-open"></i></a></li>
+                    <li style="display: none;" class="product--wishlist"><a href=""><i class="glyphicon glyphicon-heart-empty"></i></a></li>
+                    <li><a href="javascript:void(0);" class="product--view-options"> <i class="glyphicon glyphicon-option-vertical"></i></a></li>
+                </ul>
+            </div>`)
+        });
+
+        $.each($('.products--top-rated .products .product-item'), function () {
+            $(this).find('.product--view-link').attr('href', $(this).find('.woocommerce-loop-product__link').attr('href'));
+            var html = $(this).find('.yith-wcwl-add-to-wishlist').clone();
+            $(this).find('.yith-wcwl-add-to-wishlist').remove();
+            $(this).find('.product--wishlist').html(html);
+            $(this).find('.product--wishlist .feedback').remove();
+            $(this).find('.product--wishlist .yith-wcwl-add-button a').html('<i class="glyphicon glyphicon-heart-empty"></i>');
+            $(this).find('.product--wishlist .yith-wcwl-wishlistaddedbrowse a, .product--wishlist .yith-wcwl-wishlistexistsbrowse a').html('<i class="glyphicon glyphicon-heart"></i>');
+        });
+
+        $('.products--top-rated .products .product-item').hover(function () {
+            $(this).find('.overlay').css('opacity', '1');
+        }, function () {
+            $(this).find('.overlay').css('opacity', '0');
+        });
+
+        $('.product--view-options').click(function () {
+            $(this).closest('ul').find('li:nth-child(1), li:nth-child(2)').toggle();
+        });
+
 	});
 </script>

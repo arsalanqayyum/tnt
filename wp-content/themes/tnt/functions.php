@@ -609,3 +609,12 @@ add_action('woocommerce_single_product_summary', function() {
 
 
 remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display');
+
+if(!is_singular()){
+    if( ! function_exists( 'yith_add_loop_wishlist' ) ){
+        function yith_add_loop_wishlist(){
+            echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
+        }
+    }
+    add_action( 'woocommerce_after_shop_loop_item', 'yith_add_loop_wishlist' );
+}

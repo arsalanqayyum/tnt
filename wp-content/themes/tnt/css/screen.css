@@ -616,7 +616,10 @@ footer input {
   background-color: #fff;
   margin: auto;
   margin-top: -68px;
-  border: 1px solid #00000017; }
+  border: 1px solid #00000017;
+  margin-left: 25px; }
+  .overlay a {
+    line-height: 69px; }
 
 .sidebar .overlay {
   position: relative;
@@ -1958,5 +1961,10 @@ header.main-menu #wp-megamenu-top {
   font-size: 20px; }
   .page--search h2 a:hover {
     color: #333; }
+
+.overlay li {
+  margin-left: 25px; }
+  .overlay li a {
+    line-height: 69px; }
 
 /*# sourceMappingURL=screen.css.map */
