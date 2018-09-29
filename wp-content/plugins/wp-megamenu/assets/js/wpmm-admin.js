@@ -764,4 +764,27 @@
         $('.integration-code-by-id').show();
         $('.integration-code-by-slug').hide();
     });
+
+
+    $('.add_item').on('click', function (e) {
+        e.preventDefault();
+        var form_parent = $(this).closest('.form_parent');
+        var form_item = form_parent.find('.form_item').last().clone();
+        form_item.insertBefore($(this));
+        remove_item();
+    });
+
+    function remove_item() {
+        $('.remove_item').on('click', function (e) {
+            e.preventDefault();
+            if ($('.form_parent').children().length > 3){
+                $(this).closest('.form_item').remove();
+            }
+        });
+    }
+
+    remove_item();
+
+
+
 })(jQuery);

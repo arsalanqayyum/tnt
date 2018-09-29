@@ -117,7 +117,6 @@ if ( ! class_exists('wp_megamenu_widgets')) {
          */
         public function show_widget( $id ) {
             global $wp_registered_widgets;
-
             $params = array_merge(
                 array( array_merge( array( 'widget_id' => $id, 'widget_name' => $wp_registered_widgets[$id]['name'] ) ) ),
                 (array) $wp_registered_widgets[$id]['params']

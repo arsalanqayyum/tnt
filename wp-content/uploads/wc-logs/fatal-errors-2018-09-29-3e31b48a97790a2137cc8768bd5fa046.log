@@ -1,0 +1,60 @@
+2018-09-29T07:32:11+00:00 CRITICAL Uncaught Error: Call to undefined function wp_megamenu() in C:\xampp\htdocs\tnt\wp-content\themes\tnt\header.php:127
+Stack trace:
+#0 C:\xampp\htdocs\tnt\wp-includes\template.php(688): require_once()
+#1 C:\xampp\htdocs\tnt\wp-includes\template.php(647): load_template('C:/xampp/htdocs...', true)
+#2 C:\xampp\htdocs\tnt\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\tnt\wp-content\themes\tnt\front-page.php(2): get_header()
+#4 C:\xampp\htdocs\tnt\wp-includes\template-loader.php(74): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\tnt\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\tnt\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown
+
+2018-09-29T07:32:12+00:00 CRITICAL Uncaught Error: Call to undefined function wp_megamenu() in C:\xampp\htdocs\tnt\wp-content\themes\tnt\header.php:127
+Stack trace:
+#0 C:\xampp\htdocs\tnt\wp-includes\template.php(688): require_once()
+#1 C:\xampp\htdocs\tnt\wp-includes\template.php(647): load_template('C:/xampp/htdocs...', true)
+#2 C:\xampp\htdocs\tnt\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\tnt\wp-content\themes\tnt\404.php(1): get_header()
+#4 C:\xampp\htdocs\tnt\wp-includes\template-loader.php(74): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\tnt\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\tnt\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown
+
+2018-09-29T07:32:16+00:00 CRITICAL Uncaught Error: Call to undefined function wp_megamenu() in C:\xampp\htdocs\tnt\wp-content\themes\tnt\header.php:127
+Stack trace:
+#0 C:\xampp\htdocs\tnt\wp-includes\template.php(688): require_once()
+#1 C:\xampp\htdocs\tnt\wp-includes\template.php(647): load_template('C:/xampp/htdocs...', true)
+#2 C:\xampp\htdocs\tnt\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\tnt\wp-content\themes\tnt\front-page.php(2): get_header()
+#4 C:\xampp\htdocs\tnt\wp-includes\template-loader.php(74): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\tnt\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\tnt\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown
+
+2018-09-29T07:32:17+00:00 CRITICAL Uncaught Error: Call to undefined function wp_megamenu() in C:\xampp\htdocs\tnt\wp-content\themes\tnt\header.php:127
+Stack trace:
+#0 C:\xampp\htdocs\tnt\wp-includes\template.php(688): require_once()
+#1 C:\xampp\htdocs\tnt\wp-includes\template.php(647): load_template('C:/xampp/htdocs...', true)
+#2 C:\xampp\htdocs\tnt\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\tnt\wp-content\themes\tnt\404.php(1): get_header()
+#4 C:\xampp\htdocs\tnt\wp-includes\template-loader.php(74): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\tnt\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\tnt\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown
+
+2018-09-29T07:58:16+00:00 CRITICAL Uncaught Error: Class 'WP_Bootstrap_Navwalker' not found in C:\xampp\htdocs\tnt\wp-content\themes\tnt\header.php:165
+Stack trace:
+#0 C:\xampp\htdocs\tnt\wp-includes\template.php(688): require_once()
+#1 C:\xampp\htdocs\tnt\wp-includes\template.php(647): load_template('C:/xampp/htdocs...', true)
+#2 C:\xampp\htdocs\tnt\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\tnt\wp-content\themes\tnt\front-page.php(2): get_header()
+#4 C:\xampp\htdocs\tnt\wp-includes\template-loader.php(74): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\tnt\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\tnt\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown
+

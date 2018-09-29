@@ -133,7 +133,19 @@
 
 
 <div class="mynav" data-spy="affix" data-offset="500">
-    <div class="container">
+    <?php
+        wp_nav_menu( array(
+            'theme_location'  => 'top',
+            'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+            'container'       => 'nav',
+            'container_class' => 'collapse navbar-collapse',
+            'container_id'    => 'bs-example-navbar-collapse-1',
+            'menu_class'      => 'navbar-nav mr-auto',
+            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+            'walker'          => new WP_Bootstrap_Navwalker(),
+        ) );
+    ?>
+    <div class="container" style="display: none;">
         <div class="row">
             <div class="col-sm-4 col-xs-4">
                 <div class="hamburger"><i class="fa fa-bars"></i> </div>
@@ -145,8 +157,8 @@
             <div class="col-sm-4 col-xs-4 search">
                 <div class="show-magnifier"><i class="fa fa-search"></i></div>
                 <div class="show-cross" style="display: none;"><i class="fa fa-close"></i></div>
-                <form style="display: none">
-                    <input type="text" placeholder="hit enter to search">
+                <form style="display: none" method="get" action="<?php echo home_url(); ?>">
+                    <input type="text" name="s" value="<?php echo isset($_REQUEST['s']) ? $_REQUEST['s'] : ''; ?>" placeholder="hit enter to search">
                 </form>
             </div>
         </div>

@@ -958,10 +958,47 @@ header{
 }
 
 .overlay {
-  li{
-    margin-left: 25px;
+  height: auto;
+  margin-top: -65px;
+  ul{
+    display: table;
+    width: 100%;
+    margin: 0 !important;
+    li{
+      display: table-cell;
+      padding: 20px 15px;
+      &:first-child{
+        text-align: center;
+      }
+      .yith-wcwl-add-to-wishlist{
+        margin-top: 0;
+        .ajax-loading{
+          top: 21px;
+          position: absolute;
+        }
+      }
+      a{
+        line-height: 1;
+        display: block;
+      }
+    }
+  }
+}
+
+.list-unstyled{
+  .menu{
+    padding-left: 0;
+    list-style: none;
     a{
-      line-height: 69px;
+      color: $white;
+
+    }
+  }
+}
+.payment{
+  a{
+    .fa{
+      color: $white;
     }
   }
 }

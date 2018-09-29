@@ -18,11 +18,11 @@ if ( ! empty($_GET['theme_id'])){
             </div>
         </div>
 
-
         <div id="wpmm-tabs" class="wpmm-settings-wrap wpmm-theme-settings-wrap">
             <div class="wpmm-settings-tabs-menu">
                 <ul>
                     <li><a href="#tabs-1"><?php _e('General Settings', 'wp-megamenu'); ?></a></li>
+                    <?php do_action('wpmm_settings_tab_menu_before'); ?>
                     <li><a href="#tabs-3"><?php _e('Menu Bar', 'wp-megamenu'); ?></a></li>
                     <li><a href="#tabs-2"><?php _e('Brand Logo', 'wp-megamenu'); ?></a></li>
                     <li><a href="#tabs-4"><?php _e('First Level Menu Items', 'wp-megamenu'); ?></a></li>
@@ -35,6 +35,7 @@ if ( ! empty($_GET['theme_id'])){
                     <li><a href="#tabs-12"><?php _e('Social Links', 'wp-megamenu'); ?></a></li>
                     <li><a href="#tabs-11"><?php _e('Additional CSS/JS', 'wp-megamenu'); ?></a></li>
                     <li><a href="#tabs-14"><?php _e('Export', 'wp-megamenu'); ?></a></li>
+                    <?php do_action('wpmm_settings_tab_menu_after'); ?>
                 </ul>
             </div>
 
@@ -54,7 +55,6 @@ if ( ! empty($_GET['theme_id'])){
                                 ?>" />
                             </td>
                         </tr>
-
 
                         <tr class=" wpmm-field-group">
                             <th>
@@ -144,6 +144,7 @@ if ( ! empty($_GET['theme_id'])){
 
                     </table>
                 </div>
+                <?php do_action('wpmm_settings_tab_content'); ?>
                 <div id="tabs-2">
                     <table class="form-table wpmm-option-table wpmm-main-setting-table">
 
@@ -305,6 +306,10 @@ if ( ! empty($_GET['theme_id'])){
                             <td>
                                 <input type="text" name="wpmm_theme_option[menubar_bg]" value="<?php echo get_wpmm_theme_option('menubar_bg', $theme_id); ?>" class="color-picker" data-alpha="true" />
                                 <p class="field-description"><?php _e('Set transparent or solid color for menu background.', 'wp-megamenu'); ?></p>
+                            </td>
+                            <td>
+                                <input type="text" name="wpmm_theme_option[menubar_bg_2]" value="<?php echo get_wpmm_theme_option('menubar_bg_2', $theme_id); ?>" class="color-picker" data-alpha="true" />
+                                <p class="field-description"><?php _e('Set second color for gradient background.', 'wp-megamenu'); ?></p>
                             </td>
                         </tr>
 
@@ -735,6 +740,10 @@ if ( ! empty($_GET['theme_id'])){
                                 <input type="text" name="wpmm_theme_option[top_level_item_bg_color]" value="<?php echo get_wpmm_theme_option('top_level_item_bg_color', $theme_id); ?>" class="color-picker" data-alpha="true" />
                                 <p class="field-description"><?php _e('Set item background color.', 'wp-megamenu'); ?></p>
                             </td>
+                            <td>
+                                <input type="text" name="wpmm_theme_option[top_level_item_bg_color_2]" value="<?php echo get_wpmm_theme_option('top_level_item_bg_color_2', $theme_id); ?>" class="color-picker" data-alpha="true" />
+                                <p class="field-description"><?php _e('Set second background color for gradient.', 'wp-megamenu'); ?></p>
+                            </td>
                         </tr>
 
 
@@ -746,8 +755,12 @@ if ( ! empty($_GET['theme_id'])){
                                 <input type="text" name="wpmm_theme_option[top_level_item_bg_hover_color]" value="<?php echo get_wpmm_theme_option('top_level_item_bg_hover_color', $theme_id); ?>" class="color-picker" data-alpha="true" />
                                 <p class="field-description"><?php _e('Set item background hover color.', 'wp-megamenu'); ?></p>
                             </td>
-                        </tr>
 
+                            <td>
+                                <input type="text" name="wpmm_theme_option[top_level_item_bg_hover_color_2]" value="<?php echo get_wpmm_theme_option('top_level_item_bg_hover_color_2', $theme_id); ?>" class="color-picker" data-alpha="true" />
+                                <p class="field-description"><?php _e('Set second background hover color for gradient.', 'wp-megamenu'); ?></p>
+                            </td>
+                        </tr>
 
 
                         <tr class="wpmm-field wpmm-field-group">
@@ -891,7 +904,7 @@ if ( ! empty($_GET['theme_id'])){
                             <td>
                                 <div class="wpmm_theme_arrow_segment">
                                     <label>
-                                        <p><?php _e('Width', 'wp-megamenu'); ?></p>
+                                        <p><?php _e('Top Width', 'wp-megamenu'); ?></p>
 
                                         <?php
                                         $top_level_item_border_width = get_wpmm_theme_option('top_level_item_border_width', $theme_id);
@@ -900,6 +913,45 @@ if ( ! empty($_GET['theme_id'])){
                                         }
                                         ?>
                                         <input type='text' name='wpmm_theme_option[top_level_item_border_width]' value="<?php echo $top_level_item_border_width; ?>" placeholder="0px" />
+                                    </label>
+                                </div>
+                                <div class="wpmm_theme_arrow_segment">
+                                    <label>
+                                        <p><?php _e('Right Width', 'wp-megamenu'); ?></p>
+
+                                        <?php
+                                        $top_level_item_border_width_right = get_wpmm_theme_option('top_level_item_border_width_right', $theme_id);
+                                        if( ! $top_level_item_border_width_right){
+                                            $top_level_item_border_width_right = '';
+                                        }
+                                        ?>
+                                        <input type='text' name='wpmm_theme_option[top_level_item_border_width_right]' value="<?php echo $top_level_item_border_width_right; ?>" placeholder="0px" />
+                                    </label>
+                                </div>
+                                <div class="wpmm_theme_arrow_segment">
+                                    <label>
+                                        <p><?php _e('Bottom Width', 'wp-megamenu'); ?></p>
+
+                                        <?php
+                                        $top_level_item_border_width_bottom = get_wpmm_theme_option('top_level_item_border_width_bottom', $theme_id);
+                                        if( ! $top_level_item_border_width_bottom){
+                                            $top_level_item_border_width_bottom = '';
+                                        }
+                                        ?>
+                                        <input type='text' name='wpmm_theme_option[top_level_item_border_width_bottom]' value="<?php echo $top_level_item_border_width_bottom; ?>" placeholder="0px" />
+                                    </label>
+                                </div>
+                                <div class="wpmm_theme_arrow_segment">
+                                    <label>
+                                        <p><?php _e('Left Width', 'wp-megamenu'); ?></p>
+
+                                        <?php
+                                        $top_level_item_border_width_left = get_wpmm_theme_option('top_level_item_border_width_left', $theme_id);
+                                        if( ! $top_level_item_border_width_left){
+                                            $top_level_item_border_width_left = '';
+                                        }
+                                        ?>
+                                        <input type='text' name='wpmm_theme_option[top_level_item_border_width_left]' value="<?php echo $top_level_item_border_width_left; ?>" placeholder="0px" />
                                     </label>
                                 </div>
 
@@ -935,7 +987,7 @@ if ( ! empty($_GET['theme_id'])){
                             <td>
                                 <div class="wpmm_theme_arrow_segment">
                                     <label>
-                                        <p><?php _e('Width', 'wp-megamenu'); ?></p>
+                                        <p><?php _e('Top Width', 'wp-megamenu'); ?></p>
 
                                         <?php
                                         $top_level_item_hover_border_width = get_wpmm_theme_option('top_level_item_hover_border_width', $theme_id);
@@ -944,6 +996,45 @@ if ( ! empty($_GET['theme_id'])){
                                         }
                                         ?>
                                         <input type='text' name='wpmm_theme_option[top_level_item_hover_border_width]' value="<?php echo $top_level_item_hover_border_width; ?>" placeholder="0px" />
+                                    </label>
+                                </div>
+                               <div class="wpmm_theme_arrow_segment">
+                                    <label>
+                                        <p><?php _e('Right Width', 'wp-megamenu'); ?></p>
+
+                                        <?php
+                                        $top_level_item_hover_border_width_right = get_wpmm_theme_option('top_level_item_hover_border_width_right', $theme_id);
+                                        if( ! $top_level_item_hover_border_width_right){
+                                            $top_level_item_hover_border_width_right = '';
+                                        }
+                                        ?>
+                                        <input type='text' name='wpmm_theme_option[top_level_item_hover_border_width_right]' value="<?php echo $top_level_item_hover_border_width_right; ?>" placeholder="0px" />
+                                    </label>
+                                </div>
+                               <div class="wpmm_theme_arrow_segment">
+                                    <label>
+                                        <p><?php _e('Bottom Width', 'wp-megamenu'); ?></p>
+
+                                        <?php
+                                        $top_level_item_hover_border_width_bottom = get_wpmm_theme_option('top_level_item_hover_border_width_bottom', $theme_id);
+                                        if( ! $top_level_item_hover_border_width_bottom){
+                                            $top_level_item_hover_border_width_bottom = '';
+                                        }
+                                        ?>
+                                        <input type='text' name='wpmm_theme_option[top_level_item_hover_border_width_bottom]' value="<?php echo $top_level_item_hover_border_width_bottom; ?>" placeholder="0px" />
+                                    </label>
+                                </div>
+                               <div class="wpmm_theme_arrow_segment">
+                                    <label>
+                                        <p><?php _e('Left Width', 'wp-megamenu'); ?></p>
+
+                                        <?php
+                                        $top_level_item_hover_border_width_left = get_wpmm_theme_option('top_level_item_hover_border_width_left', $theme_id);
+                                        if( ! $top_level_item_hover_border_width_left){
+                                            $top_level_item_hover_border_width_left = '';
+                                        }
+                                        ?>
+                                        <input type='text' name='wpmm_theme_option[top_level_item_hover_border_width_left]' value="<?php echo $top_level_item_hover_border_width_left; ?>" placeholder="0px" />
                                     </label>
                                 </div>
 
@@ -1353,6 +1444,118 @@ if ( ! empty($_GET['theme_id'])){
                             </td>
                         </tr>
 
+
+                        <tr class="wpmm-field wpmm-field-group">
+                            <th>
+                                <?php _e('First Item', 'wp-megamenu'); ?>
+                            </th>
+                            <td>
+                                <?php $dropdown_submenu_first_item_text_color = get_wpmm_theme_option('dropdown_submenu_first_item_text_color', $theme_id);
+                                if (!$dropdown_submenu_first_item_text_color) {
+                                    $dropdown_submenu_first_item_text_color = $dropdown_submenu_item_text_color;
+                                }
+                                ?>
+                                <div>
+                                    <label class="text_and_input">
+                                        <span class="wpmm_labe_text"><?php _e('Color', 'wp-megamenu'); ?></span>
+                                        <input type="text" name="wpmm_theme_option[dropdown_submenu_first_item_text_color]" value="<?php echo $dropdown_submenu_first_item_text_color; ?>" class="color-picker" data-alpha="true" />
+                                    </label>
+                                </div>
+
+                                <?php $dropdown_submenu_first_item_text_hover_color = get_wpmm_theme_option('dropdown_submenu_first_item_text_hover_color', $theme_id);
+                                if (!$dropdown_submenu_first_item_text_hover_color) {
+                                    $dropdown_submenu_first_item_text_hover_color = $dropdown_submenu_item_text_hover_color;
+                                }
+                                ?>
+                                <div>
+                                    <label class="text_and_input">
+                                        <span class="wpmm_labe_text"><?php _e('Hover Color', 'wp-megamenu'); ?> </span>
+                                        <input type="text" name="wpmm_theme_option[dropdown_submenu_first_item_text_hover_color]" value="<?php echo $dropdown_submenu_first_item_text_hover_color; ?>" class="color-picker" data-alpha="true" />
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label class="text_and_input">
+                                        <span class="wpmm_labe_text"><?php _e('Font Size', 'wp-megamenu'); ?> </span>
+                                        <?php
+                                        $dropdown_submenu_first_item_text_font_size = get_wpmm_theme_option('dropdown_submenu_first_item_text_font_size', $theme_id);
+                                        if (!$dropdown_submenu_first_item_text_font_size) {
+                                            $dropdown_submenu_first_item_text_font_size = '12px';
+                                        }
+                                        ?>
+                                        <input type="text" name="wpmm_theme_option[dropdown_submenu_first_item_text_font_size]" value="<?php echo $dropdown_submenu_first_item_text_font_size; ?>" placeholder="0px" />
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label class="text_and_input">
+                                        <span class="wpmm_labe_text"> <?php _e('Font Weight', 'wp-megamenu'); ?> </span>
+                                        <?php
+                                        $dropdown_submenu_first_item_text_font_weight = get_wpmm_theme_option('dropdown_submenu_first_item_text_font_weight', $theme_id);
+                                        if (!$dropdown_submenu_first_item_text_font_weight) {
+                                            $dropdown_submenu_first_item_text_font_weight = 'normal';
+                                        }
+                                        ?>
+                                        <select name="wpmm_theme_option[dropdown_submenu_first_item_text_font_weight]">
+                                            <option value="normal" <?php selected($dropdown_submenu_first_item_text_font_weight, 'normal') ?> > <?php _e('Normal', 'wp-megamenu'); ?> </option>
+                                            <option value="bold" <?php selected($dropdown_submenu_first_item_text_font_weight, 'bold') ?> > <?php _e('Bold', 'wp-megamenu'); ?> </option>
+                                            <option value="bolder" <?php selected($dropdown_submenu_first_item_text_font_weight, 'bolder') ?> > <?php _e('Bolder', 'wp-megamenu'); ?> </option>
+                                            <option value="lighter" <?php selected($dropdown_submenu_first_item_text_font_weight, 'lighter') ?> > <?php _e('Lighter', 'wp-megamenu'); ?> </option>
+                                            <option value="100" <?php selected($dropdown_submenu_first_item_text_font_weight, '100') ?> > <?php _e('100', 'wp-megamenu'); ?> </option>
+                                            <option value="200" <?php selected($dropdown_submenu_first_item_text_font_weight, '200') ?> > <?php _e('200', 'wp-megamenu'); ?> </option>
+                                            <option value="300" <?php selected($dropdown_submenu_first_item_text_font_weight, '300') ?> > <?php _e('300', 'wp-megamenu'); ?> </option>
+                                            <option value="400" <?php selected($dropdown_submenu_first_item_text_font_weight, '400') ?> > <?php _e('400', 'wp-megamenu'); ?> </option>
+                                            <option value="500" <?php selected($dropdown_submenu_first_item_text_font_weight, '500') ?> > <?php _e('500', 'wp-megamenu'); ?> </option>
+                                            <option value="600" <?php selected($dropdown_submenu_first_item_text_font_weight, '600') ?> > <?php _e('600', 'wp-megamenu'); ?> </option>
+                                            <option value="700" <?php selected($dropdown_submenu_first_item_text_font_weight, '700') ?> > <?php _e('700', 'wp-megamenu'); ?> </option>
+                                            <option value="800" <?php selected($dropdown_submenu_first_item_text_font_weight, '800') ?> > <?php _e('800', 'wp-megamenu'); ?> </option>
+                                            <option value="900" <?php selected($dropdown_submenu_first_item_text_font_weight, '900') ?> > <?php _e('900', 'wp-megamenu'); ?> </option>
+                                        </select>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label class="text_and_input">
+                                        <span class="wpmm_labe_text"> <?php _e('Line Height', 'wp-megamenu'); ?> </span>
+                                        <?php
+                                        $dropdown_submenu_first_item_text_line_height = get_wpmm_theme_option('dropdown_submenu_first_item_text_line_height', $theme_id);
+                                        if (!$dropdown_submenu_first_item_text_line_height) {
+                                            $dropdown_submenu_first_item_text_line_height = '';
+                                        }
+                                        ?>
+                                        <input type="text" name="wpmm_theme_option[dropdown_submenu_first_item_text_line_height]" value="<?php echo $dropdown_submenu_first_item_text_line_height; ?>" data-alpha="true" />
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label class="text_and_input">
+                                        <span class="wpmm_labe_text"> <?php _e('Text Transform', 'wp-megamenu'); ?> </span>
+                                        <select name="wpmm_theme_option[dropdown_submenu_first_item_text_transform]">
+                                            <option value="uppercase" <?php selected(get_wpmm_theme_option('dropdown_submenu_first_item_text_transform', $theme_id), 'uppercase') ?> > <?php _e('Uppercase', 'wp-megamenu');
+                                                                                                                                                                                        ?> </option>
+                                            <option value="lowercase" <?php selected(get_wpmm_theme_option('dropdown_submenu_first_item_text_transform', $theme_id), 'lowercase') ?> > <?php _e('Lowercase', 'wp-megamenu'); ?> </option>
+                                            <option value="capitalize" <?php selected(get_wpmm_theme_option('dropdown_submenu_first_item_text_transform', $theme_id), 'capitalize') ?> > <?php _e('Capitalize', 'wp-megamenu'); ?> </option>
+                                        </select>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label class="text_and_input">
+                                        <span class="wpmm_labe_text"> <?php _e('Letter Spacing', 'wp-megamenu'); ?> </span>
+
+                                        <?php
+                                        $dropdown_submenu_first_item_text_letter_spacing = get_wpmm_theme_option('dropdown_submenu_first_item_text_letter_spacing', $theme_id);
+                                        if (!$dropdown_submenu_first_item_text_letter_spacing) {
+                                            $dropdown_submenu_first_item_text_letter_spacing = '';
+                                        }
+                                        ?>
+                                        <input type="text" name="wpmm_theme_option[dropdown_submenu_first_item_text_letter_spacing]" value="<?php echo $dropdown_submenu_first_item_text_letter_spacing; ?>" data-alpha="true" />
+                                    </label>
+                                </div>
+
+                            </td>
+                        </tr>
+
                         <tr class="wpmm-field wpmm-field-group">
                             <th>
                                 <?php _e('Item Background Color', 'wp-megamenu'); ?>
@@ -1601,117 +1804,6 @@ if ( ! empty($_GET['theme_id'])){
                                 </label>
 
                                 <p class="field-description"> <?php _e('Set hover border width and color.', 'wp-megamenu'); ?></p>
-                            </td>
-                        </tr>
-
-                        <tr class="wpmm-field wpmm-field-group">
-                            <th>
-                                <?php _e('First Item', 'wp-megamenu'); ?>
-                            </th>
-                            <td>
-                                <?php $dropdown_submenu_first_item_text_color = get_wpmm_theme_option('dropdown_submenu_first_item_text_color', $theme_id);
-                                if ( ! $dropdown_submenu_first_item_text_color){
-                                    $dropdown_submenu_first_item_text_color = 'inherit';
-                                }
-                                ?>
-                                <div>
-                                    <label class="text_and_input">
-                                        <span class="wpmm_labe_text"><?php _e('Color', 'wp-megamenu'); ?></span>
-                                        <input type="text" name="wpmm_theme_option[dropdown_submenu_first_item_text_color]" value="<?php echo $dropdown_submenu_first_item_text_color; ?>" class="color-picker" data-alpha="true" />
-                                    </label>
-                                </div>
-
-                                <?php $dropdown_submenu_first_item_text_hover_color = get_wpmm_theme_option('dropdown_submenu_first_item_text_hover_color', $theme_id);
-                                if ( ! $dropdown_submenu_first_item_text_hover_color){
-                                    $dropdown_submenu_first_item_text_hover_color = 'inherit';
-                                }
-                                ?>
-                                <div>
-                                    <label class="text_and_input">
-                                        <span class="wpmm_labe_text"><?php _e('Hover Color', 'wp-megamenu'); ?> </span>
-                                        <input type="text" name="wpmm_theme_option[dropdown_submenu_first_item_text_hover_color]" value="<?php echo $dropdown_submenu_first_item_text_hover_color; ?>" class="color-picker" data-alpha="true" />
-                                    </label>
-                                </div>
-
-                                <div>
-                                    <label class="text_and_input">
-                                        <span class="wpmm_labe_text"><?php _e('Font Size', 'wp-megamenu'); ?> </span>
-                                        <?php
-                                        $dropdown_submenu_first_item_text_font_size = get_wpmm_theme_option('dropdown_submenu_first_item_text_font_size', $theme_id);
-                                        if( ! $dropdown_submenu_first_item_text_font_size){
-                                            $dropdown_submenu_first_item_text_font_size = '12px';
-                                        }
-                                        ?>
-                                        <input type="text" name="wpmm_theme_option[dropdown_submenu_first_item_text_font_size]" value="<?php echo $dropdown_submenu_first_item_text_font_size; ?>" placeholder="0px" />
-                                    </label>
-                                </div>
-
-                                <div>
-                                    <label class="text_and_input">
-                                        <span class="wpmm_labe_text"> <?php _e('Font Weight', 'wp-megamenu'); ?> </span>
-                                        <?php
-                                        $dropdown_submenu_first_item_text_font_weight = get_wpmm_theme_option('dropdown_submenu_first_item_text_font_weight', $theme_id);
-                                        if( ! $dropdown_submenu_first_item_text_font_weight){
-                                            $dropdown_submenu_first_item_text_font_weight = 'normal';
-                                        }
-                                        ?>
-                                        <select name="wpmm_theme_option[dropdown_submenu_first_item_text_font_weight]">
-                                            <option value="normal" <?php selected($dropdown_submenu_first_item_text_font_weight, 'normal') ?> > <?php _e('Normal', 'wp-megamenu'); ?> </option>
-                                            <option value="bold" <?php selected($dropdown_submenu_first_item_text_font_weight, 'bold') ?> > <?php _e('Bold', 'wp-megamenu'); ?> </option>
-                                            <option value="bolder" <?php selected($dropdown_submenu_first_item_text_font_weight, 'bolder') ?> > <?php _e('Bolder', 'wp-megamenu'); ?> </option>
-                                            <option value="lighter" <?php selected($dropdown_submenu_first_item_text_font_weight, 'lighter') ?> > <?php _e('Lighter', 'wp-megamenu'); ?> </option>
-                                            <option value="100" <?php selected($dropdown_submenu_first_item_text_font_weight, '100') ?> > <?php _e('100', 'wp-megamenu'); ?> </option>
-                                            <option value="200" <?php selected($dropdown_submenu_first_item_text_font_weight, '200') ?> > <?php _e('200', 'wp-megamenu'); ?> </option>
-                                            <option value="300" <?php selected($dropdown_submenu_first_item_text_font_weight, '300') ?> > <?php _e('300', 'wp-megamenu'); ?> </option>
-                                            <option value="400" <?php selected($dropdown_submenu_first_item_text_font_weight, '400') ?> > <?php _e('400', 'wp-megamenu'); ?> </option>
-                                            <option value="500" <?php selected($dropdown_submenu_first_item_text_font_weight, '500') ?> > <?php _e('500', 'wp-megamenu'); ?> </option>
-                                            <option value="600" <?php selected($dropdown_submenu_first_item_text_font_weight, '600') ?> > <?php _e('600', 'wp-megamenu'); ?> </option>
-                                            <option value="700" <?php selected($dropdown_submenu_first_item_text_font_weight, '700') ?> > <?php _e('700', 'wp-megamenu'); ?> </option>
-                                            <option value="800" <?php selected($dropdown_submenu_first_item_text_font_weight, '800') ?> > <?php _e('800', 'wp-megamenu'); ?> </option>
-                                            <option value="900" <?php selected($dropdown_submenu_first_item_text_font_weight, '900') ?> > <?php _e('900', 'wp-megamenu'); ?> </option>
-                                        </select>
-                                    </label>
-                                </div>
-
-                                <div>
-                                    <label class="text_and_input">
-                                        <span class="wpmm_labe_text"> <?php _e('Line Height', 'wp-megamenu'); ?> </span>
-                                        <?php
-                                        $dropdown_submenu_first_item_text_line_height = get_wpmm_theme_option('dropdown_submenu_first_item_text_line_height', $theme_id);
-                                        if( ! $dropdown_submenu_first_item_text_line_height){
-                                            $dropdown_submenu_first_item_text_line_height = '';
-                                        }
-                                        ?>
-                                        <input type="text" name="wpmm_theme_option[dropdown_submenu_first_item_text_line_height]" value="<?php echo $dropdown_submenu_first_item_text_line_height; ?>" data-alpha="true" />
-                                    </label>
-                                </div>
-
-                                <div>
-                                    <label class="text_and_input">
-                                        <span class="wpmm_labe_text"> <?php _e('Text Transform', 'wp-megamenu'); ?> </span>
-                                        <select name="wpmm_theme_option[dropdown_submenu_first_item_text_transform]">
-                                            <option value="uppercase" <?php selected(get_wpmm_theme_option('dropdown_submenu_first_item_text_transform', $theme_id), 'uppercase') ?> > <?php _e('Uppercase', 'wp-megamenu');
-                                                ?> </option>
-                                            <option value="lowercase" <?php selected(get_wpmm_theme_option('dropdown_submenu_first_item_text_transform', $theme_id), 'lowercase') ?> > <?php _e('Lowercase', 'wp-megamenu'); ?> </option>
-                                            <option value="capitalize" <?php selected(get_wpmm_theme_option('dropdown_submenu_first_item_text_transform', $theme_id), 'capitalize') ?> > <?php _e('Capitalize', 'wp-megamenu'); ?> </option>
-                                        </select>
-                                    </label>
-                                </div>
-
-                                <div>
-                                    <label class="text_and_input">
-                                        <span class="wpmm_labe_text"> <?php _e('Letter Spacing', 'wp-megamenu'); ?> </span>
-
-                                        <?php
-                                        $dropdown_submenu_first_item_text_letter_spacing = get_wpmm_theme_option('dropdown_submenu_first_item_text_letter_spacing', $theme_id);
-                                        if( ! $dropdown_submenu_first_item_text_letter_spacing){
-                                            $dropdown_submenu_first_item_text_letter_spacing = '';
-                                        }
-                                        ?>
-                                        <input type="text" name="wpmm_theme_option[dropdown_submenu_first_item_text_letter_spacing]" value="<?php echo $dropdown_submenu_first_item_text_letter_spacing; ?>" data-alpha="true" />
-                                    </label>
-                                </div>
-
                             </td>
                         </tr>
 
@@ -3133,6 +3225,127 @@ if ( ! empty($_GET['theme_id'])){
                                 </select>
                             </td>
                         </tr>
+                    </table>
+
+                    <?php 
+                        $wpmm_db_version = get_option('WPMM_VER');
+                        if (version_compare($wpmm_db_version, '1.2.0', '>')) : // soical links for new version
+                    ?>
+                    <table class="form-table wpmm-option-table wpmm-main-setting-table wpmm-repeatable-group">
+                        <tr class="wpmm-field-group wpmm-repeatable-item">
+                            <th>
+                                <?php _e('Social Icons', 'wp-megamenu'); ?>
+                            </th>
+                            <td>
+                                <div class="form_parent">
+                                    <div class="form_item_heading">
+                                        <label>
+                                            <input type="text" value="Icon class:" readonly>
+                                        </label>
+                                        <label>
+                                            <input type="text" value="Icon URL:" readonly>
+                                        </label>
+                                    </div>
+
+
+
+                                    <?php 
+
+                                    $wpmm_social_icon = get_wpmm_theme_option('social_icon', $theme_id);
+                                    $icon_index = 0;
+                                    if ($wpmm_social_icon && array_key_exists('icon', $wpmm_social_icon)) {
+                                        foreach ($wpmm_social_icon['icon'] as $icon) {
+                                            ?>
+                                            <div class="form_item">
+                                                <label>
+                                                    <input 
+                                                        type="text" 
+                                                        name="wpmm_theme_option[social_icon][icon][]" 
+                                                        placeholder="fa fa-facebook"
+                                                        value="<?php echo $icon; ?>"
+                                                    />
+                                                </label>
+                                                <label>
+                                                    <input 
+                                                        type="text" 
+                                                        name="wpmm_theme_option[social_icon][url][]" 
+                                                        placeholder="https://fb.com/username" 
+                                                        value="<?php echo $wpmm_social_icon['url'][$icon_index]; ?>"
+                                                    />
+                                                </label>
+                                                <a class="remove_item" href="#"><?php _e('Remove', 'wp-megamenu'); ?></a>
+                                            </div>
+
+                                        <?php
+                                        $icon_index += 1;
+                                    }
+                                } else {
+
+                                    ?>
+
+                                            <div class="form_item">
+                                                <label>
+                                                    <input 
+                                                        type="text" 
+                                                        name="wpmm_theme_option[social_icon][icon][]" 
+                                                        placeholder="fa fa-facebook"
+                                                        value=""
+                                                    />
+                                                </label>
+                                                <label>
+                                                    <input 
+                                                        type="text" 
+                                                        name="wpmm_theme_option[social_icon][url][]" 
+                                                        placeholder="https://fb.com/username" 
+                                                        value=""
+                                                    />
+                                                </label>
+                                                <a class="remove_item" href="#"><?php _e('Remove', 'wp-megamenu'); ?></a>
+                                            </div>
+                                        <?php
+
+                                    }
+
+                                    ?>
+                                    <a href="#" class="add_item"><?php _e('Add More', 'wp-megamenu'); ?></a>
+
+                                </div>
+                                
+                            </td>
+                        </tr>
+                    </table>
+
+                <?php
+                    else: // soical links for older version
+                ?>
+
+                    <!-- for old version -->
+                    <table class="form-table wpmm-option-table wpmm-main-setting-table">
+                        <tr class="wpmm-fields-header wpmm-field-group wpmm-table-divider">
+                            <th colspan="2"> <?php _e('Social Links', 'wp-megamenu'); ?> </th>
+                        </tr>
+
+                        <tr class=" wpmm-field-group">
+                            <th>
+                                <?php _e('Enable Social Links', 'wp-megamenu'); ?>
+                            </th>
+                            <td>
+                                <label> <input type='checkbox' name='wpmm_theme_option[enable_social_links]' value='true' <?php checked(get_wpmm_theme_option('enable_social_links', $theme_id), 'true'); ?> /> <?php _e('Enable/Disable', 'wp-megamenu'); ?>
+                                </label>
+                            </td>
+                        </tr>
+
+                        <tr class=" wpmm-field-group">
+                            <th>
+                                <?php _e('Target', 'wp-megamenu'); ?>
+                            </th>
+                            <td>
+                                <select name="wpmm_theme_option[social_links_target]" >
+                                    <option value="_blank" <?php selected(get_wpmm_theme_option('social_links_target', $theme_id), '_blank'); ?> ><?php _e('Open New Tab', 'wp-megamenu') ?></option>
+                                    <option value="_self" <?php selected(get_wpmm_theme_option('social_links_target', $theme_id), '_self'); ?> ><?php _e('Open Self Tab', 'wp-megamenu') ?></option>
+                                </select>
+                            </td>
+                        </tr>
 
                         <tr class="wpmm-field wpmm-field-group">
                             <th>
@@ -3157,7 +3370,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Facebook', 'wp-megamenu'); ?>
+                                    <?php _e('Facebook', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-facebook"></i> <input type="text" name="wpmm_theme_option[social_links_facebook]" value="<?php echo get_wpmm_theme_option('social_links_facebook', $theme_id); ?>" />
@@ -3184,7 +3397,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Instagram', 'wp-megamenu'); ?>
+                                    <?php _e('Instagram', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-instagram"></i> <input type="text" name="wpmm_theme_option[social_links_instagram]" value="<?php echo get_wpmm_theme_option('social_links_instagram', $theme_id); ?>" />
@@ -3193,7 +3406,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Linked In', 'wp-megamenu'); ?>
+                                    <?php _e('Linked In', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-linkedin"></i> <input type="text" name="wpmm_theme_option[social_links_linkedin]" value="<?php echo get_wpmm_theme_option('social_links_linkedin', $theme_id); ?>" />
@@ -3202,7 +3415,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Pinterest', 'wp-megamenu'); ?>
+                                    <?php _e('Pinterest', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-pinterest"></i> <input type="text" name="wpmm_theme_option[social_links_pinterest]" value="<?php echo get_wpmm_theme_option('social_links_pinterest', $theme_id); ?>" />
@@ -3211,7 +3424,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Youtube', 'wp-megamenu'); ?>
+                                    <?php _e('Youtube', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-youtube"></i> <input type="text" name="wpmm_theme_option[social_links_youtube]" value="<?php echo get_wpmm_theme_option('social_links_youtube', $theme_id); ?>" />
@@ -3220,7 +3433,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Dribbble', 'wp-megamenu'); ?>
+                                    <?php _e('Dribbble', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-dribbble"></i><input type="text" name="wpmm_theme_option[social_links_dribbble]" value="<?php echo get_wpmm_theme_option('social_links_dribbble', $theme_id); ?>" />
@@ -3229,7 +3442,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Behance', 'wp-megamenu'); ?>
+                                    <?php _e('Behance', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-behance"></i><input type="text" name="wpmm_theme_option[social_links_behance]" value="<?php echo get_wpmm_theme_option('social_links_behance', $theme_id); ?>" />
@@ -3238,7 +3451,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Digg', 'wp-megamenu'); ?>
+                                    <?php _e('Digg', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-digg"></i><input type="text" name="wpmm_theme_option[social_links_digg]" value="<?php echo get_wpmm_theme_option('social_links_digg', $theme_id); ?>" />
@@ -3247,7 +3460,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Vimeo', 'wp-megamenu'); ?>
+                                    <?php _e('Vimeo', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-vimeo"></i><input type="text" name="wpmm_theme_option[social_links_vimeo]" value="<?php echo get_wpmm_theme_option('social_links_vimeo', $theme_id); ?>" />
@@ -3256,7 +3469,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('stumbleupon', 'wp-megamenu'); ?>
+                                    <?php _e('stumbleupon', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-stumbleupon"></i><input type="text" name="wpmm_theme_option[social_links_stumbleupon]" value="<?php echo get_wpmm_theme_option('social_links_stumbleupon', $theme_id); ?>" />
@@ -3265,7 +3478,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Reddit', 'wp-megamenu'); ?>
+                                    <?php _e('Reddit', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-reddit"></i><input type="text" name="wpmm_theme_option[social_links_reddit]" value="<?php echo get_wpmm_theme_option('social_links_reddit', $theme_id); ?>" />
@@ -3274,7 +3487,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Delicious', 'wp-megamenu'); ?>
+                                    <?php _e('Delicious', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-delicious"></i><input type="text" name="wpmm_theme_option[social_links_delicious]" value="<?php echo get_wpmm_theme_option('social_links_delicious', $theme_id); ?>" />
@@ -3283,7 +3496,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Skype', 'wp-megamenu'); ?>
+                                    <?php _e('Skype', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-skype"></i><input type="text" name="wpmm_theme_option[social_links_skype]" value="<?php echo get_wpmm_theme_option('social_links_skype', $theme_id); ?>" />
@@ -3292,7 +3505,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Github', 'wp-megamenu'); ?>
+                                    <?php _e('Github', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-github"></i><input type="text" name="wpmm_theme_option[social_links_github]" value="<?php echo get_wpmm_theme_option('social_links_github', $theme_id); ?>" />
@@ -3301,7 +3514,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('amazon', 'wp-megamenu'); ?>
+                                    <?php _e('amazon', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-amazon"></i><input type="text" name="wpmm_theme_option[social_links_amazon]" value="<?php echo get_wpmm_theme_option('social_links_amazon', $theme_id); ?>" />
@@ -3310,7 +3523,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('WhatsApp', 'wp-megamenu'); ?>
+                                    <?php _e('WhatsApp', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-whatsapp"></i><input type="text" name="wpmm_theme_option[social_links_whatsapp]" value="<?php echo get_wpmm_theme_option('social_links_whatsapp', $theme_id); ?>" />
@@ -3319,7 +3532,7 @@ if ( ! empty($_GET['theme_id'])){
 
                         <tr class=" wpmm-field-group">
                             <th>
-                                 <?php _e('Soundcloud', 'wp-megamenu'); ?>
+                                    <?php _e('Soundcloud', 'wp-megamenu'); ?>
                             </th>
                             <td>
                                 <i class="fa fa-soundcloud"></i><input type="text" name="wpmm_theme_option[social_links_soundcloud]" value="<?php echo get_wpmm_theme_option('social_links_soundcloud', $theme_id); ?>" />
@@ -3327,6 +3540,11 @@ if ( ! empty($_GET['theme_id'])){
                         </tr>
 
                     </table>
+                    <!-- end for old version -->
+                <?php
+                    endif;
+                ?>
+
                 </div>
 
 

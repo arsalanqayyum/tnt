@@ -22,7 +22,7 @@ if ( ! class_exists('wp_megamenu')) {
 			if ($this->container_type === 'wpmm-strees-row' || $this->container_type === 'wpmm-strees-row-and-content' ){
 				$output .= "\n{$indent}<div id='{$this->wpmm_item_id}' class='{$this->container_type}-container'> {$is_row_content_strees_extra_div} <ul class=\"wp-megamenu-sub-menu\">\n";
 			}else{
-				$output .= "\n{$indent}<ul class=\"wp-megamenu-sub-menu\">\n";
+				$output .= "\n{$indent}<ul class=\"wp-megamenu-sub-menu\" >\n";
 			}
 		}
 
@@ -193,16 +193,26 @@ if ( ! class_exists('wp_megamenu')) {
 				}
 
 				// dropdown menu indicator
-				if($args->has_children){
-					if(empty($wpmm_item_settings['options']['hide_arrow']) || $wpmm_item_settings['options']['hide_arrow'] !== 'true'){
-						if($depth == 0){
-							$item_output .= ' <b class="fa ' . $theme_options_array['dropdown_arrow_down'] . '"></b> ';
-						}
-						elseif(!empty($wpmm_item_settings['options']['dropdown_alignment']) && $wpmm_item_settings['options']['dropdown_alignment'] == 'left') {
-							$item_output .= ' <b class="fa ' . $theme_options_array['dropdown_arrow_left'] . '"></b> ';
-						}
-						else{
-							$item_output .= ' <b class="fa ' . $theme_options_array['dropdown_arrow_right'] . '"></b> ';
+				if ($args->has_children) {
+					if (empty($wpmm_item_settings['options']['hide_arrow']) || $wpmm_item_settings['options']['hide_arrow'] !== 'true') {
+						if ($depth == 0) {
+							if (isset($theme_options_array['dropdown_arrow_down'])) {
+								$item_output .= ' <b class="fa ' . $theme_options_array['dropdown_arrow_down'] . '"></b> ';
+							}else{
+								$item_output .= ' <b class="fa fa-angle-down"></b> ';
+							}
+						} elseif (!empty($wpmm_item_settings['options']['dropdown_alignment']) && $wpmm_item_settings['options']['dropdown_alignment'] == 'left') {
+							if (isset($theme_options_array['dropdown_arrow_left'])) {
+								$item_output .= ' <b class="fa ' . $theme_options_array['dropdown_arrow_left'] . '"></b> ';
+							} else {
+								$item_output .= ' <b class="fa fa-angle-left"></b> ';
+							}
+						} else {
+							if (isset($theme_options_array['dropdown_arrow_right'])) {
+								$item_output .= ' <b class="fa ' . $theme_options_array['dropdown_arrow_right'] . '"></b> ';
+							} else {
+								$item_output .= ' <b class="fa fa-angle-right"></b> ';
+							}
 						}
 					}
 				}
@@ -318,11 +328,19 @@ function overrite_functions_wp_megamenu($args){
 	$logo_height = '';
 	$search_form = '';
 	$toggle_btn_open_text = __('MENU', 'wp-megamenu');
+		
 
 	if ($theme_id){
-		if (get_wpmm_theme_option('enable_sticky_menu', $theme_id) == 'true'){
-			$sticky_class = 'wpmm-sticky';
-		}
+
+
+        $wpmm_orientation = get_wpmm_theme_option('wpmm_orientation', $theme_id);
+        $enable_sticky_menu = get_wpmm_theme_option('enable_sticky_menu', $theme_id);
+        if($enable_sticky_menu === true){
+            if($wpmm_orientation === null OR $wpmm_orientation !== 'wpmm_vertical'){
+                $sticky_class = 'wpmm-sticky';
+            }
+        }
+
 		$menu_layout = get_wpmm_theme_option('menu_layout', $theme_id);
 		if ($menu_layout){
 			$menu_layout_class = " wpmm-{$menu_layout} ";
@@ -381,14 +399,21 @@ function overrite_functions_wp_megamenu($args){
 		if ($disable_wpmm_on_mobile != true) {
 			$wpmm_on_mobile = '<a href="javascript:;" class="wpmm_mobile_menu_btn"><i class="fa fa-bars"></i> '.$toggle_btn_open_text.'</a>';
 		}
+		
+		$item_wrap = '
+			<div class="wpmm-fullwidth-wrap"></div>
+			<div class="wpmm-nav-wrap wpmm-main-wrap-'.$args['theme_location'].'">
+				' .$wpmm_on_mobile.' '.$brand_logo_wrap.'
+					<ul id="%1$s" class="%2$s" >%3$s</ul>
+				'.$search_form.'
+			</div>
+		';
 
-		$item_wrap = '<div class="wpmm-fullwidth-wrap"></div><div class="wpmm-nav-wrap wpmm-main-wrap-'
-		             .$args['theme_location'].'">' .$wpmm_on_mobile.' '.$brand_logo_wrap.'<ul id="%1$s" class="%2$s">%3$s</ul>'.$search_form.'</div>';
 
 
 		$wpmm_wrap_class = '';
 		if ($theme_id){
-			$wpmm_wrap_class = "wp-megamenu-wrap {$sticky_class} {$menu_layout_class} {$menu_custom_class} ";
+			$wpmm_wrap_class = "wp-megamenu-wrap {$sticky_class} {$menu_layout_class} {$menu_custom_class}";
 		}
 
 		//echo '<pre>';
@@ -438,10 +463,11 @@ function overrite_functions_wp_megamenu($args){
 			}
 
 			$item_wrap = '<div class="wpmm-fullwidth-wrap"></div><div class="wpmm-nav-wrap wpmm-main-wrap-'
-			             .$args['theme_location'].'">' .$wpmm_on_mobile.' '.$brand_logo_wrap.'<ul id="%1$s" class="%2$s">%3$s</ul>'.$search_form.'</div>';
+			             .$args['theme_location'].'">' .$wpmm_on_mobile.' '.$brand_logo_wrap. '<ul id="%1$s" '.apply_filters('wpmm_custom_attributes', '', $theme_id).' class="%2$s">%3$s</ul>'.$search_form.'</div>';
 
 
 			$wpmm_wrap_class = '';
+
 			if ($theme_id){
 				$wpmm_wrap_class = "wp-megamenu-wrap {$sticky_class} {$menu_layout_class} {$menu_custom_class} ";
 			}
@@ -452,7 +478,7 @@ function overrite_functions_wp_megamenu($args){
 				'theme_location'    => $args['theme_location'],
 				'container'         => $container,
 				'container_id'      => 'wp-megamenu-' . $args['theme_location'],
-				'container_class'   => $wpmm_wrap_class,
+				'container_class'   => apply_filters('wpmm_wraper_class', $wpmm_wrap_class, $theme_id),
 				'menu_class'        => 'wp-megamenu',
 				'echo'              => true,
 				'fallback_cb'       => 'wp_page_menu',
@@ -533,9 +559,14 @@ function wp_megamenu_nav_args($args = array()){
 	$toggle_btn_open_text = __('MENU', 'wp-megamenu');
 
 	if ($theme_id){
-		if (get_wpmm_theme_option('enable_sticky_menu', $theme_id) == 'true'){
-			$sticky_class = 'wpmm-sticky';
-		}
+	    //sticky menu class
+        $wpmm_orientation = get_wpmm_theme_option('wpmm_orientation', $theme_id);
+        $enable_sticky_menu = get_wpmm_theme_option('enable_sticky_menu', $theme_id);
+        if($enable_sticky_menu === true){
+            if($wpmm_orientation === null OR $wpmm_orientation !== 'wpmm_vertical'){
+                $sticky_class = 'wpmm-sticky';
+            }
+        }
 		$menu_layout = get_wpmm_theme_option('menu_layout', $theme_id);
 		if ($menu_layout){
 			$menu_layout_class = " wpmm-{$menu_layout} ";
@@ -589,7 +620,16 @@ function wp_megamenu_nav_args($args = array()){
 		$wpmm_on_mobile = '<a href="javascript:;" class="wpmm_mobile_menu_btn"><i class="fa fa-bars"></i> '.$toggle_btn_open_text.'</a>';
 	}
 
-	$item_wrap = '<div class="wpmm-fullwidth-wrap"></div><div class="wpmm-nav-wrap wpmm-main-wrap-' .'">' .$wpmm_on_mobile.' '.$brand_logo_wrap.'<ul id="%1$s" class="%2$s">%3$s</ul>'.$search_form.'</div>';
+
+	$wpmm_menu_attributes = '';
+	$item_wrap = '
+		<div class="wpmm-fullwidth-wrap"></div>
+		<div class="wpmm-nav-wrap wpmm-main-wrap-' .'">
+			' .$wpmm_on_mobile.' '.$brand_logo_wrap.'
+				<ul id="%1$s" '. apply_filters('wpmm_custom_attributes', $wpmm_menu_attributes, $theme_id) .' class="%2$s">%3$s</ul>
+			'.$search_form.'
+		</div>
+	';
 
 	$wpmm_wrap_class = '';
 	if ($theme_id){
@@ -606,7 +646,7 @@ function wp_megamenu_nav_args($args = array()){
 
 	$args['container'] = $container;
 	$args['container_id'] = 'wp-megamenu-'.$menu_object->slug;
-	$args['container_class'] = $wpmm_wrap_class;
+	$args['container_class'] = apply_filters('wpmm_wraper_class', $wpmm_wrap_class, $theme_id);
 	$args['menu_class'] = 'wp-megamenu';
 	$args['echo'] = true;
 	$args['fallback_cb'] = 'wp_page_menu';

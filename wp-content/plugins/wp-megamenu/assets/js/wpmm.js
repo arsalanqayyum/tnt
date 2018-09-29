@@ -5,6 +5,7 @@
         $('.wpmm-search-form').toggle();
     });
 
+
    //Sticky Nav
     jQuery(window).on('scroll', function(){'use strict';
         if ( jQuery(window).scrollTop() > 100 ) {
@@ -70,5 +71,6 @@
     };
     megamenu_strees_row_content();
     $(window).on('resize', megamenu_strees_row_content);
+
     
 })(jQuery);

@@ -2,25 +2,19 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                <div class="box">
-                    <i class="fa fa-3x fa-truck"></i>
-                </div>
-                <p class="pol-head">delievery partners</p>
-                <p class="pol-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam.</p>
+                <?php if ( is_active_sidebar( 'top-footer-1' ) ) : ?>
+                    <?php dynamic_sidebar( 'top-footer-1' ); ?>
+                <?php endif; ?>
             </div>
             <div class="col-sm-4">
-                <div class="box">
-                    <i class="fa fa-3x fa-money"></i>
-                </div>
-                <p class="pol-head">payment policy</p>
-                <p class="pol-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam.</p>
+                <?php if ( is_active_sidebar( 'top-footer-2' ) ) : ?>
+                    <?php dynamic_sidebar( 'top-footer-2' ); ?>
+                <?php endif; ?>
             </div>
             <div class="col-sm-4">
-                <div class="box">
-                    <i class="fa fa-3x fa-exclamation-triangle"></i>
-                </div>
-                <p class="pol-head">return policy</p>
-                <p class="pol-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam.</p>
+                <?php if ( is_active_sidebar( 'top-footer-3' ) ) : ?>
+                    <?php dynamic_sidebar( 'top-footer-3' ); ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -30,33 +24,26 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/cutter-and-buck-logo-white.png" class="img-responsive">
+                <?php if ( is_active_sidebar( 'bottom-footer-1' ) ) : ?>
+                    <?php dynamic_sidebar( 'bottom-footer-1' ); ?>
+                <?php endif; ?>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3">
-                <h4>Get to know us</h4>
-                <ul class="list-unstyled">
-                    <li>about us</li>
-                    <li>terms & conditions</li>
-                    <li>privacy policy</li>
-                    <li>contact us</li>
-                    <li>NTN Number : 123456-7</li>
-                </ul>
+                <?php if ( is_active_sidebar( 'bottom-footer-2' ) ) : ?>
+                    <?php dynamic_sidebar( 'bottom-footer-2' ); ?>
+                <?php endif; ?>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3">
-                <h4>Get to know us</h4>
-                <ul class="list-unstyled">
-                    <li>about us</li>
-                    <li>terms & conditions</li>
-                    <li>privacy policy</li>
-                    <li>contact us</li>
-                </ul>
+                <?php if ( is_active_sidebar( 'bottom-footer-3' ) ) : ?>
+                    <?php dynamic_sidebar( 'bottom-footer-3' ); ?>
+                <?php endif; ?>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-4">
                 <h4>Get in touch</h4>
                 <ul class="list-inline payment">
-                    <li><i class="fa fa-facebook-square"></i> </li>
-                    <li><i class="fa fa-linkedin-square"></i> </li>
-                    <li><i class="fa fa-twitter-square"></i> </li>
+                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
                 </ul>
                 <h4>payment method</h4>
                 <ul class="list-inline payment">
@@ -90,7 +77,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <p class="copy">copyrights 2018 all rights reserved</p>
+                <p class="copy">copyrights <?php echo date('Y'); ?> all rights reserved</p>
                 <p class="powered">designed by: <a href="">devwebs</a></p>
             </div>
         </div>

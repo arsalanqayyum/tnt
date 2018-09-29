@@ -327,26 +327,6 @@ function twentyseventeen_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Footer 1', 'twentyseventeen' ),
-		'id'            => 'sidebar-2',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Footer 2', 'twentyseventeen' ),
-		'id'            => 'sidebar-3',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
 }
 add_action( 'widgets_init', 'twentyseventeen_widgets_init' );
 
@@ -579,10 +559,73 @@ function custom_widgets_areas(){
 	register_sidebar(array(
 			'name' => 'Top Rated Products',
 			'id' => 'top-rated-products',
-			'before_widget' => '<div>',
+			'before_widget' => '<div class="list-unstyled">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h2>',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h4>',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(array(
+			'name' => 'Top Footer 1',
+			'id' => 'top-footer-1',
+			'before_widget' => '<div class="list-unstyled">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4>',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(array(
+			'name' => 'Top Footer 2',
+			'id' => 'top-footer-2',
+			'before_widget' => '<div class="list-unstyled">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4>',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(array(
+			'name' => 'Top Footer 3',
+			'id' => 'top-footer-3',
+			'before_widget' => '<div class="list-unstyled">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4>',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(array(
+			'name' => 'Bottom Footer 1',
+			'id' => 'bottom-footer-1',
+			'before_widget' => '<div class="list-unstyled">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4>',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(array(
+			'name' => 'Bottom Footer 2',
+			'id' => 'bottom-footer-2',
+			'before_widget' => '<div class="list-unstyled">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4>',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(array(
+			'name' => 'Bottom Footer 3',
+			'id' => 'bottom-footer-3',
+			'before_widget' => '<div class="list-unstyled">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4>',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(array(
+			'name' => 'Bottom Footer 4',
+			'id' => 'bottom-footer-4',
+			'before_widget' => '<div class="list-unstyled">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4>',
+			'after_title'   => '</h4>',
 		)
 	);
 }
@@ -618,3 +661,6 @@ if(!is_singular()){
     }
     add_action( 'woocommerce_after_shop_loop_item', 'yith_add_loop_wishlist' );
 }
+
+
+require_once 'class-wp-bootstrap-navwalker.php';

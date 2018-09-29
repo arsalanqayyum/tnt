@@ -1120,30 +1120,27 @@ input.wpmm_theme_title{
 }
 .wp-admin .wpmm-theme-head-import input[type=file] {
     padding: 0;
-        position: absolute;
-    top: 0;
-    right: 0;
     margin: 0;
     padding: 0;
     font-size: 20px;
     cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    width: auto;
+    width: 180px;
     display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
 }
 .wpmm-import-label {
     height: 36px;
     display: inline-block;
 }
 
-.wpmm-import-label span {
+/* .wpmm-import-label span {
     border: 1px solid #e2e2e2;
     padding: 8px 15px;
     border-radius: 3px;
     display: inline-block;
     vertical-align: middle;
-}
+} */
 
 /* menu builder */
 .wpmm-tabs-menu-builder > ul {
@@ -1326,7 +1323,7 @@ input.wpmm_theme_title{
 }
 .wp-picker-holder {
     position: absolute;
-    z-index: 999;
+    z-index: 9999999;
 }
 .wpmm-width-stress {
     float: left;

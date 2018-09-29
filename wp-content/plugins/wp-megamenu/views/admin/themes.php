@@ -60,7 +60,7 @@ $query = new WP_Query($post_args);
                     <p class="submit">
                         <label class="wpmm-import-label">
                             <input type="file" name="wpmm_theme_import_file" />
-                            <span>Choose a file…</span>
+                            
                             <?php wp_nonce_field( 'wpmmm_import_theme_action', 'wpmmm_import_theme_nonce_field' ) ?>
                             <input name="submit" id="submit" class="button button-primary" value="<?php _e('Import Theme', 'wp-megamenu') ?>" type="submit">
 
@@ -80,7 +80,7 @@ $query = new WP_Query($post_args);
                     <p class="submit">
                         <label class="wpmm-import-label">
                             <input type="file" name="wpmm_import_menu_file" />
-                            <span>Choose a file…</span>
+                            
 							<?php wp_nonce_field( 'wpmmm_import_menu_action', 'wpmmm_import_menu_nonce_field' ) ?>
                             <input name="submit" id="submit" class="button button-primary" value="<?php _e('Import Menu', 'wp-megamenu') ?>" type="submit">
                         </label>

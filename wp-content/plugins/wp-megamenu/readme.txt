@@ -4,7 +4,7 @@ Tags: wp-megamenu, megamenu, mega menu, navigation, responsive menu, menu, build
 Donate Link: https://www.themeum.com/
 Requires at least: 4.0
 Tested up to: 4.9
-Stable tag: 1.2.0
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,8 +77,36 @@ A. Yes, it’s fully free.
 
 == Changelog ==
 
+= 1.2.3 [27/09/18]
 
-= 1.1.9 [10/09/18] =
+* Added: Gradient background option for menubar & first level menu item.
+* Added: Specific border option for first level menu item.
+* Fixed: Sticky menu issue.
+* Fixed: Menu bar border radius issue.
+* Fixed: Vertical menu z-index issue.
+
+= 1.2.2 [25/09/18] =
+
+* Hotfix Update to fix a css build issue
+
+= 1.2.1 [24/09/18] =
+
+* Added: Custom social icon support.
+* Added: Two new predefined theme.
+* Added: IcoFont Icon
+* Added: Widget Search Option
+* Added: Text Transform ‘none’ & ‘inherit’ option.
+* Fixed: Cannot save dropdown menu option.
+* Fixed: Cannot add multi-level dropdown menu icon.
+* Fixed: Multi-level dropdown indicator is not showing properly
+* Fixed: Some PHP warning.
+* Fixed: Mobile menu animation issue.
+* Fixed: Icon & Badge spacing & Alignment Issue.
+* Fixed: FontAwesome 4 & FontAwesome 5 conflict issue
+* Fixed: Multiple menu theme is not working properly
+
+
+= 1.2.0 [10/09/18] =
 
 * Added : IcoFont Icon
 * Added : Widget Search Option

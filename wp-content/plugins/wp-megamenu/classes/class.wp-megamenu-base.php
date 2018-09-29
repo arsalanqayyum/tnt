@@ -437,23 +437,45 @@ if ( ! class_exists('wp_megamenu_base')) {
 				}
 
 				if ($enable_social_links == 'true'){
-					$wpmm_nav_social_links_item = wpmm_nav_social_links_item();
-					foreach ($wpmm_nav_social_links_item as $social_links){
-						$social_item_link = get_wpmm_theme_option('social_links_'.$social_links, $theme_id);
-						if ( ! empty($social_item_link)){
-							$icon = $social_links;
-							if ($icon === 'gplus'){
-								$icon = 'google-plus';
+					$wpmm_db_version = get_option('WPMM_VER');
+					if (version_compare($wpmm_db_version, '1.2.0', '>')) {
+						$wpmm_social_icon = get_wpmm_theme_option('social_icon', $theme_id);
+						$icon_index = 0;
+						if ($wpmm_social_icon && array_key_exists('icon', $wpmm_social_icon)) {
+							foreach ($wpmm_social_icon['icon'] as $icon) {
+								$icon_name = str_replace("fa-", "", $icon);
+								$icon_name = str_replace("fa ", "", $icon_name);
+								$items[] = (object)array(
+									'title' => '<i class="' . $icon . '"></i>',
+									'type' => 'wpmm_social',
+									'menu_item_parent' => 0,
+									'ID' => $icon_name,
+									'db_id' => '',
+									'url' => $wpmm_social_icon['url'][$icon_index],
+									'classes' => array('wpmm-social-link', 'wpmm-social-link-' . $icon_name)
+								);
+								$icon_index += 1;
 							}
-							$items[] = (object)array(
-								'title' => '<i class="fa fa-'.$icon.'"></i>',
-								'type' => 'wpmm_social',
-								'menu_item_parent' => 0,
-								'ID' => $social_links,
-								'db_id' => '',
-								'url' => $social_item_link,
-								'classes' => array('wpmm-social-link', 'wpmm-social-link-'.$social_links)
-							);
+						}
+					}else{
+						$wpmm_nav_social_links_item = wpmm_nav_social_links_item();
+						foreach ($wpmm_nav_social_links_item as $social_links) {
+							$social_item_link = get_wpmm_theme_option('social_links_' . $social_links, $theme_id);
+							if (!empty($social_item_link)) {
+								$icon = $social_links;
+								if ($icon === 'gplus') {
+									$icon = 'google-plus';
+								}
+								$items[] = (object)array(
+									'title' => '<i class="fa fa-' . $icon . '"></i>',
+									'type' => 'wpmm_social',
+									'menu_item_parent' => 0,
+									'ID' => $social_links,
+									'db_id' => '',
+									'url' => $social_item_link,
+									'classes' => array('wpmm-social-link', 'wpmm-social-link-' . $social_links)
+								);
+							}
 						}
 					}
 				}

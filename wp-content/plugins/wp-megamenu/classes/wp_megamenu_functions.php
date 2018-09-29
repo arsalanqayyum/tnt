@@ -1464,3 +1464,50 @@ function wp_megamenu_shortcode( $atts ) {
 	return $return;
 }
 add_shortcode( 'wp_megamenu', 'wp_megamenu_shortcode' );
+
+
+
+add_filter( 'plugin_row_meta', 'custom_plugin_row_meta', 10, 2 );
+
+function custom_plugin_row_meta( $links, $file ) {
+    if ( strpos( $file, 'wp-megamenu.php' ) !== false ) {
+        $new_links = array(
+            'wppb_docs' =>  '<a href="https://www.themeum.com/docs/wp-mega-menu-introduction/" target="_blank">'.__('Docs', 'wp-megamenu').'</a>',
+            'wppb_support' =>  '<a href="https://www.themeum.com/support-forums/" target="_blank">'.__('Free Support', 'wp-megamenu').'</a>'
+        );
+
+        $links = array_merge( $links, $new_links );
+    }
+
+    return $links;
+}
+add_filter( 'plugin_action_links_' . WPMM_BASENAME, 'plugin_action_links_callback');
+
+function plugin_action_links_callback ( $links ) {
+    $wpmm_upgrade_link = array();
+    if(!defined('WPMM_PRO_VERSION')){
+        $wpmm_upgrade_link = array(
+            'wpmm_pro' => '<a href="https://www.themeum.com/product/wp-megamenu/#pricing?utm_source=wp_mm&utm_medium=wordpress_dashboard&utm_campaign=go_premium" target="_blank"><span style="color: #39a700eb; font-weight: bold;">'.__('Upgrade to Pro', 'wp-megamenu').'</span></a>'
+        );
+    }
+    return array_merge( $wpmm_upgrade_link, $links);
+}
+add_action( 'admin_menu', 'wpmm_add_admin_menu', 502 );
+
+ function wpmm_add_admin_menu(){
+    $is_pro_activated = is_plugin_active('wp-megamenu-pro/wp-megamenu-pro.php');
+    if ( ! $is_pro_activated ){
+        add_submenu_page( 'wp_megamenu', __( 'Go Premium', 'wp-megamenu' ), __( '<span class="dashicons dashicons-awards wppb-go-premium-star"></span> Go Premium', 'wp-megamenu' ), 'manage_options', 'wpmm-go-premium', 'wppb_go_premium_page' );
+    }
+}
+
+add_action( 'admin_init', 'wpmm_go_premium_page' );
+ function wpmm_go_premium_page(){
+    if ( empty( $_GET['page'] ) ) {
+        return;
+    }
+    if ( 'wpmm-go-premium' === $_GET['page'] ) {
+        wp_redirect( 'https://www.themeum.com/product/wp-megamenu/#pricing?utm_source=wp_mm&utm_medium=wordpress_sidebar&utm_campaign=go_premium' );
+        die();
+    }
+}

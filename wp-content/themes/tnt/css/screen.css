@@ -616,8 +616,7 @@ footer input {
   background-color: #fff;
   margin: auto;
   margin-top: -68px;
-  border: 1px solid #00000017;
-  margin-left: 25px; }
+  border: 1px solid #00000017; }
   .overlay a {
     line-height: 69px; }
 
@@ -1962,9 +1961,34 @@ header.main-menu #wp-megamenu-top {
   .page--search h2 a:hover {
     color: #333; }
 
-.overlay li {
-  margin-left: 25px; }
-  .overlay li a {
-    line-height: 69px; }
+.overlay {
+  height: auto;
+  margin-top: -65px; }
+  .overlay ul {
+    display: table;
+    width: 100%;
+    margin: 0 !important; }
+    .overlay ul li {
+      display: table-cell;
+      padding: 20px 15px; }
+      .overlay ul li:first-child {
+        text-align: center; }
+      .overlay ul li .yith-wcwl-add-to-wishlist {
+        margin-top: 0; }
+        .overlay ul li .yith-wcwl-add-to-wishlist .ajax-loading {
+          top: 21px;
+          position: absolute; }
+      .overlay ul li a {
+        line-height: 1;
+        display: block; }
+
+.list-unstyled .menu {
+  padding-left: 0;
+  list-style: none; }
+  .list-unstyled .menu a {
+    color: #fff; }
+
+.payment a .fa {
+  color: #fff; }
 
 /*# sourceMappingURL=screen.css.map */

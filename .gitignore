@@ -17,3 +17,4 @@ wp-*.php
 vcs.xml
 xmlrpc.php
 license.txt
+.sass-cache
