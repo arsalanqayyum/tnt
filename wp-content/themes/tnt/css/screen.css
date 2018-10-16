@@ -1991,4 +1991,66 @@ header.main-menu #wp-megamenu-top {
 .payment a .fa {
   color: #fff; }
 
+@media (max-width: 600px) {
+  .breadcrumb {
+    display: block;
+    padding: 20px 0 !important;
+    margin: 0 -15px !important;
+    background: transparent !important; }
+    .breadcrumb h1 {
+      color: #333; }
+
+  .mynav {
+    max-height: 70px; }
+    .mynav .sidemenu {
+      position: relative;
+      top: 15px;
+      width: 100%;
+      left: -100%; }
+      .mynav .sidemenu nav {
+        display: block !important;
+        background-color: transparent !important; }
+        .mynav .sidemenu nav .wpmm_brand_logo_wrap, .mynav .sidemenu nav .wpmm-social-link {
+          display: none !important; }
+        .mynav .sidemenu nav ul li {
+          display: block;
+          padding: 0 !important;
+          margin-bottom: 10px; }
+          .mynav .sidemenu nav ul li > a {
+            display: block;
+            color: #fff !important; }
+            .mynav .sidemenu nav ul li > a .fa {
+              float: right; }
+          .mynav .sidemenu nav ul li img, .mynav .sidemenu nav ul li p {
+            display: none; }
+          .mynav .sidemenu nav ul li .wp-megamenu-sub-menu li .wpmm-item-title {
+            text-align: left !important;
+            color: #e44444 !important; }
+          .mynav .sidemenu nav ul li .wp-megamenu-sub-menu li a {
+            color: #333 !important;
+            padding-left: 15px; }
+
+  .products--top-rated .product-item .onsale, .single-product .single-product-content-area .upsell .product-item .onsale {
+    left: 38px !important; }
+
+  .overlay {
+    max-width: calc(100% - 45px); }
+
+  #owl-demo-2 {
+    margin-top: 40px; }
+
+  footer h4 {
+    margin-left: 0; }
+  footer .input-group input, footer .input-group button {
+    min-height: 34px; }
+
+  .related-product-container .related-product-item {
+    margin-left: 0;
+    margin-right: 0; }
+
+  .wp-megamenu-wrap .wpmm-nav-wrap > ul.wp-megamenu > li.wpmm_mega_menu > ul.wp-megamenu-sub-menu,
+  .wp-megamenu-wrap .wpmm-nav-wrap > ul.wp-megamenu > li.wpmm_mega_menu > .wpmm-strees-row-container > ul.wp-megamenu-sub-menu,
+  .wp-megamenu-wrap .wpmm-nav-wrap > ul.wp-megamenu > li.wpmm_mega_menu > .wpmm-strees-row-and-content-container > ul.wp-megamenu-sub-menu {
+    position: relative; } }
+
 /*# sourceMappingURL=screen.css.map */

@@ -653,7 +653,7 @@ add_action('woocommerce_single_product_summary', function() {
 
 remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display');
 
-if(!is_singular()){
+if(!is_singular() && !is_archive()){
     if( ! function_exists( 'yith_add_loop_wishlist' ) ){
         function yith_add_loop_wishlist(){
             echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
@@ -663,4 +663,12 @@ if(!is_singular()){
 }
 
 
-require_once 'class-wp-bootstrap-navwalker.php';
+function attachments_search_pre_get_posts( $query ) {
+    if (! is_search() )
+        return $query;
+    $post_types = array( 'post', 'page', 'product', 'nav_menu_item' );
+    $query->set( 'post_type', $post_types );
+    return $query;
+}
+add_filter( 'pre_get_posts', 'attachments_search_pre_get_posts' );
+
